@@ -1,1 +1,6 @@
+.sass-cache
+sass
+*.map
 node_modules
+tests
+test-assets
