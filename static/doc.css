@@ -1,0 +1,118 @@
+pre {
+  border: 0;
+  color: #032C36;
+  direction: ltr;
+  font-family: "Consolas","Monaco","Andale Mono",monospace;
+  font-size: small;
+  -moz-hyphens: none;
+  -moz-tab-size: 2;
+  text-align: left;
+  text-shadow: 0px 1px #fff;
+  white-space: pre;
+  word-spacing: normal;
+}
+
+nav a,
+nav a:hover,
+nav a:focus,
+nav a:visited {
+  color: #fff;
+}
+
+nav .action--secondary {
+  position: relative;
+}
+
+nav li + li .action--extra,
+nav li + li .action--primary,
+nav li + li .action--secondary {
+  border-left: 0;
+}
+
+.Errors .errors::before,
+.Warnings .warnings::before,
+.Obsolete .obsolete::before,
+.Advices .advices::before,
+nav:not(.Errors):not(.Warnings):not(.Obsolete):not(.Advices) .index::before {
+  content: "";
+  border-bottom: .5em solid transparent;
+  border-left: .5em solid rgba( 255, 255, 255, .25 );
+  border-top: .5em solid transparent;
+  left: 0;
+  position: absolute;
+  top: calc(50% - .5em);
+}
+
+.codeExample {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 1em 0;
+}
+
+.codeExample::before {
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 4px 0;
+  content: "Example";
+  display: block;
+  padding: .33em;
+  transform: translate(-1px, -1px);
+  width: 5em;
+}
+
+.codeBlock,
+.exampleOutput {
+  padding: 1em;
+}
+
+.codeBlock {
+  background: #f9f9f9;
+  border-top: 1px solid #ccc;
+  border-radius: 0 0 4px 4px;
+}
+
+header h1::before {
+  content: "\2665\00A0";
+  color: #c42419;
+  float: left;
+  text-align: right;
+  width: 32%;
+}
+
+/* .h3-like from sseeeedd.css */
+main h1 {
+  font-size: 2.625em;
+  line-height: 1.14286;
+  margin: 1.14286em 0px 0.57143em;
+}
+
+form label {
+  min-width: 1em;
+}
+
+aside small {
+  line-height: 1.25;
+}
+
+a[target$="blank"]::after {
+  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMBAMAAACkW0HUAAAAGFBMVEX///////////////////////////////8pK8DIAAAAAXRSTlMAQObYZgAAADZJREFUCJljKC8vYCsvZwBSDCCKgYHBHUKVu4Mo5gJ2IMUOFmBgLwZTTKlgCgjYUShxoAkgAADDIA8SMJqkyAAAAABJRU5ErkJggg==);
+  padding-left: .5em;
+}
+
+.bookmarklet::after {
+  font-size: .5em;
+  padding-left: 1em;
+  vertical-align: super;
+}
+
+.bookmarklet[href*="-en"]::after {
+  content: "en";
+}
+
+.bookmarklet[href*="-fr"]::after {
+  content: "fr";
+}
+
+.s { color: #07a } /* Literal.String */
+.na { color: #690 } /* Name.Attribute */
+.nt { color: #905 } /* Name.Tag */
