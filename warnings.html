@@ -47,7 +47,7 @@
         <ol class="mb3">
           
             <li>
-              <a href="#aria-pressed">toggle [class] without [aria-pressed]</a>
+              <a href="#aria-pressed">toggle [class] without [aria-*]</a>
             </li>
           
             <li>
@@ -176,7 +176,7 @@
           
       <div>
 
-<h1 id="aria-pressed">toggle [class] without [aria-pressed]</h1>
+<h1 id="aria-pressed">toggle [class] without [aria-*]</h1>
 
 <p>Anything with a <code>[class]</code> containing &quot;toggle&quot; probably needs some ARIA flavour, isn&#39;t it?</p>
 
@@ -196,8 +196,8 @@
 <li><a href="http://www.w3.org/TR/WCAG20/#visual-audio-contrast-dis-audio">http://www.w3.org/TR/WCAG20/#visual-audio-contrast-dis-audio</a></li>
 <li><a href="http://www.punkchip.com/autoplay-is-bad-for-all-users/">http://www.punkchip.com/autoplay-is-bad-for-all-users/</a></li>
 </ul>
-<div class="codeExample"><div class="exampleOutput"><video autoplay controls src=""></video>
-</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;video</span> <span class="na">autoplay</span> <span class="na">controls</span> <span class="na">src=</span><span class="s">""</span><span class="nt">&gt;&lt;/video&gt;</span>
+<div class="codeExample"><div class="exampleOutput"><video autoplay controls src=""></video><i> </i>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;video</span> <span class="na">autoplay</span> <span class="na">controls</span> <span class="na">src=</span><span class="s">""</span><span class="nt">&gt;&lt;/video&gt;&lt;i&gt;</span> <span class="nt">&lt;/i&gt;</span>
 </pre></div></div></div>
 <h1 id="colgroup">Invalid colgroup position</h1>
 
@@ -254,8 +254,8 @@
 <li><a href="http://www.w3.org/TR/WCAG20/#keyboard-operation-trapping">http://www.w3.org/TR/WCAG20/#keyboard-operation-trapping</a></li>
 <li><a href="http://www.w3.org/TR/WCAG-TECHS/G4.html">http://www.w3.org/TR/WCAG-TECHS/G4.html</a></li>
 </ul>
-<div class="codeExample"><div class="exampleOutput"><video src=""></video>
-</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;video</span> <span class="na">src=</span><span class="s">""</span><span class="nt">&gt;&lt;/video&gt;</span>
+<div class="codeExample"><div class="exampleOutput"><video src=""></video><i> </i>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;video</span> <span class="na">src=</span><span class="s">""</span><span class="nt">&gt;&lt;/video&gt;&lt;i&gt;</span> <span class="nt">&lt;/i&gt;</span>
 </pre></div></div></div>
 <h1 id="empty-alt">[alt] can be empty but has to be checked</h1>
 
@@ -591,22 +591,30 @@ And it must be the <code>:first-child</code>, by the way.</p>
 <li><a href="http://www.w3.org/TR/WCAG-TECHS/H39.html">http://www.w3.org/TR/WCAG-TECHS/H39.html</a></li>
 </ul>
 <div class="codeExample"><div class="exampleOutput"><table>
-  <tr>
-    <td>I'm a table without a caption!</td>
-    <td>I'm a table without a caption!</td>
-  </tr>
-  <tr>
-    <td colspan="2">I'm a table without a caption!</td>
-  </tr>
+  <thead>
+    <tr>
+      <th>I'm a table without a caption!</th>
+      <th>I'm a table without a caption!</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="2">I'm a table without a caption!</td>
+    </tr>
+  </tbody>
 </table>
 </div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;table&gt;</span>
-  <span class="nt">&lt;tr&gt;</span>
-    <span class="nt">&lt;td&gt;</span>I'm a table without a caption!<span class="nt">&lt;/td&gt;</span>
-    <span class="nt">&lt;td&gt;</span>I'm a table without a caption!<span class="nt">&lt;/td&gt;</span>
-  <span class="nt">&lt;/tr&gt;</span>
-  <span class="nt">&lt;tr&gt;</span>
-    <span class="nt">&lt;td</span> <span class="na">colspan=</span><span class="s">"2"</span><span class="nt">&gt;</span>I'm a table without a caption!<span class="nt">&lt;/td&gt;</span>
-  <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;thead&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th&gt;</span>I'm a table without a caption!<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;</span>I'm a table without a caption!<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/thead&gt;</span>
+  <span class="nt">&lt;tbody&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">colspan=</span><span class="s">"2"</span><span class="nt">&gt;</span>I'm a table without a caption!<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/tbody&gt;</span>
 <span class="nt">&lt;/table&gt;</span>
 </pre></div></div></div>
 <h1 id="table-layout">A single line table may be used for layout</h1>
