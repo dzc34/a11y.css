@@ -55,10 +55,6 @@
             </li>
           
             <li>
-              <a href="#colgroup">Invalid colgroup position</a>
-            </li>
-          
-            <li>
               <a href="#controls">[controls] would be helpful</a>
             </li>
           
@@ -76,6 +72,10 @@
           
             <li>
               <a href="#fieldset">legend must be a fieldset's:first-child</a>
+            </li>
+          
+            <li>
+              <a href="#figure-role">figure without the group ARIA role</a>
             </li>
           
             <li>
@@ -199,50 +199,6 @@
 <div class="codeExample"><div class="exampleOutput"><video autoplay controls src=""></video><i> </i>
 </div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;video</span> <span class="na">autoplay</span> <span class="na">controls</span> <span class="na">src=</span><span class="s">""</span><span class="nt">&gt;&lt;/video&gt;&lt;i&gt;</span> <span class="nt">&lt;/i&gt;</span>
 </pre></div></div></div>
-<h1 id="colgroup">Invalid colgroup position</h1>
-
-<p><code>&lt;colgroup&gt;</code> must be right after <code>&lt;caption&gt;</code> and always before <code>&lt;thead&gt;</code>, <code>&lt;tfoot&gt;</code> and <code>&lt;tbody&gt;</code>.</p>
-
-<ul>
-<li><a href="https://github.com/yahoo/debugCSS/blob/master/debugCSS.css#L292">https://github.com/yahoo/debugCSS/blob/master/debugCSS.css#L292</a></li>
-<li><a href="https://github.com/yahoo/debugCSS/blob/master/debugCSS.css#L297">https://github.com/yahoo/debugCSS/blob/master/debugCSS.css#L297</a></li>
-<li><a href="http://www.w3.org/TR/html5/tabular-data.html#the-colgroup-element">http://www.w3.org/TR/html5/tabular-data.html#the-colgroup-element</a></li>
-</ul>
-<div class="codeExample"><div class="exampleOutput"><table>
-  <caption>I'm a caption</caption>
-  <tbody>
-    <tr>
-      <td>I'm a table with cols done wrong.</td>
-      <td>I'm a table with cols done wrong.</td>
-    </tr>
-    <tr>
-      <td>I'm a table with cols done wrong.</td>
-      <td>I'm a table with cols done wrong.</td>
-    </tr>
-  <tbody>
-  <colgroup>
-    <col></col>
-    <col></col>
-  </colgroup>
-</table>
-</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;table&gt;</span>
-  <span class="nt">&lt;caption&gt;</span>I'm a caption<span class="nt">&lt;/caption&gt;</span>
-  <span class="nt">&lt;tbody&gt;</span>
-    <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;td&gt;</span>I'm a table with cols done wrong.<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>I'm a table with cols done wrong.<span class="nt">&lt;/td&gt;</span>
-    <span class="nt">&lt;/tr&gt;</span>
-    <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;td&gt;</span>I'm a table with cols done wrong.<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td&gt;</span>I'm a table with cols done wrong.<span class="nt">&lt;/td&gt;</span>
-    <span class="nt">&lt;/tr&gt;</span>
-  <span class="nt">&lt;tbody&gt;</span>
-  <span class="nt">&lt;colgroup&gt;</span>
-    <span class="nt">&lt;col&gt;&lt;/col&gt;</span>
-    <span class="nt">&lt;col&gt;&lt;/col&gt;</span>
-  <span class="nt">&lt;/colgroup&gt;</span>
-<span class="nt">&lt;/table&gt;</span>
-</pre></div></div></div>
 <h1 id="controls">[controls] would be helpful</h1>
 
 <p>A time-based media like <code>&lt;audio&gt;</code> or <code>&lt;video&gt;</code> would be easier to use if <code>[controls]</code> are activated for the user.</p>
@@ -321,6 +277,23 @@ Always.</p>
   <span class="nt">&lt;label&gt;</span>I'm not a legend.<span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;legend&gt;</span>I am legend.<span class="nt">&lt;/legend&gt;</span>
 <span class="nt">&lt;/fieldset&gt;</span>
+</pre></div></div></div>
+<h1 id="figure-role">figure without the group ARIA role</h1>
+
+<p><code>&lt;figure&gt;</code> needs <code>[role=&quot;group&quot;]</code> for accessibility reason.</p>
+
+<ul>
+<li><a href="http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#test-1-10-1">http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#test-1-10-1</a></li>
+<li><a href="http://www.w3.org/TR/html-alt-techniques/#m6">http://www.w3.org/TR/html-alt-techniques/#m6</a></li>
+</ul>
+<div class="codeExample"><div class="exampleOutput"><figure>
+  <img src="static/ffoodd.png" width="144" height="144" />
+  <figcaption>I'm a figcaption</figcaption>
+</figure>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;figure&gt;</span>
+  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"static/ffoodd.png"</span> <span class="na">width=</span><span class="s">"144"</span> <span class="na">height=</span><span class="s">"144"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;figcaption&gt;</span>I'm a figcaption<span class="nt">&lt;/figcaption&gt;</span>
+<span class="nt">&lt;/figure&gt;</span>
 </pre></div></div></div>
 <h1 id="invalid-def">Invalid sibling in a definition list</h1>
 
@@ -464,6 +437,7 @@ You could use a <code>&lt;span&gt;</code> instead.</p>
 <li><a href="https://github.com/yahoo/debugCSS/blob/master/debugCSS.css#L311">https://github.com/yahoo/debugCSS/blob/master/debugCSS.css#L311</a></li>
 </ul>
 <div class="codeExample"><div class="exampleOutput"><table>
+  <caption>issing thead</caption>
   <tbody>
     <tr>
       <td>I'm a table without thead.</td>
@@ -473,9 +447,10 @@ You could use a <code>&lt;span&gt;</code> instead.</p>
       <td>I'm a table without thead.</td>
       <td>I'm a table without thead.</td>
     </tr>
-  <tbody>
+  </tbody>
 </table>
 </div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;table&gt;</span>
+  <span class="nt">&lt;caption&gt;</span>issing thead<span class="nt">&lt;/caption&gt;</span>
   <span class="nt">&lt;tbody&gt;</span>
     <span class="nt">&lt;tr&gt;</span>
       <span class="nt">&lt;td&gt;</span>I'm a table without thead.<span class="nt">&lt;/td&gt;</span>
@@ -485,7 +460,7 @@ You could use a <code>&lt;span&gt;</code> instead.</p>
       <span class="nt">&lt;td&gt;</span>I'm a table without thead.<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;td&gt;</span>I'm a table without thead.<span class="nt">&lt;/td&gt;</span>
     <span class="nt">&lt;/tr&gt;</span>
-  <span class="nt">&lt;tbody&gt;</span>
+  <span class="nt">&lt;/tbody&gt;</span>
 <span class="nt">&lt;/table&gt;</span>
 </pre></div></div></div>
 <h1 id="no-aria-label">[aria-label] or desc is needed for svg</h1>
@@ -593,32 +568,32 @@ And it must be the <code>:first-child</code>, by the way.</p>
 <div class="codeExample"><div class="exampleOutput"><table>
   <thead>
     <tr>
-      <th>I'm a table without a caption!</th>
-      <th>I'm a table without a caption!</th>
+      <th id="th-one">I'm a table without a caption!</th>
+      <th id="th-two">I'm a table without a caption!</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td colspan="2">I'm a table without a caption!</td>
+      <td colspan="2" headers="th-one th-two">I'm a table without a caption!</td>
     </tr>
     <tr>
-      <td colspan="2">I'm a table without a caption!</td>
+      <td colspan="2" headers="th-one th-two">I'm a table without a caption!</td>
     </tr>
   </tbody>
 </table>
 </div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;table&gt;</span>
   <span class="nt">&lt;thead&gt;</span>
     <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th&gt;</span>I'm a table without a caption!<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th&gt;</span>I'm a table without a caption!<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">id=</span><span class="s">"th-one"</span><span class="nt">&gt;</span>I'm a table without a caption!<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">id=</span><span class="s">"th-two"</span><span class="nt">&gt;</span>I'm a table without a caption!<span class="nt">&lt;/th&gt;</span>
     <span class="nt">&lt;/tr&gt;</span>
   <span class="nt">&lt;/thead&gt;</span>
   <span class="nt">&lt;tbody&gt;</span>
     <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;td</span> <span class="na">colspan=</span><span class="s">"2"</span><span class="nt">&gt;</span>I'm a table without a caption!<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">colspan=</span><span class="s">"2"</span> <span class="na">headers=</span><span class="s">"th-one th-two"</span><span class="nt">&gt;</span>I'm a table without a caption!<span class="nt">&lt;/td&gt;</span>
     <span class="nt">&lt;/tr&gt;</span>
     <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;td</span> <span class="na">colspan=</span><span class="s">"2"</span><span class="nt">&gt;</span>I'm a table without a caption!<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">colspan=</span><span class="s">"2"</span> <span class="na">headers=</span><span class="s">"th-one th-two"</span><span class="nt">&gt;</span>I'm a table without a caption!<span class="nt">&lt;/td&gt;</span>
     <span class="nt">&lt;/tr&gt;</span>
   <span class="nt">&lt;/tbody&gt;</span>
 <span class="nt">&lt;/table&gt;</span>
@@ -666,10 +641,10 @@ Should be double checked!</p>
       <td>I'm a table with tfoot done wrong.</td>
       <td>I'm a table with tfoot done wrong.</td>
     </tr>
-  <tbody>
+  </tbody>
   <tfoot>
-    <th>I'm a table with tfoot done wrong.</th>
-    <th>I'm a table with tfoot done wrong.</th>
+    <th id="th-1">I'm a table with tfoot done wrong.</th>
+    <th id="th-2">I'm a table with tfoot done wrong.</th>
   </tfoot>
 </table>
 </div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;table&gt;</span>
@@ -683,10 +658,10 @@ Should be double checked!</p>
       <span class="nt">&lt;td&gt;</span>I'm a table with tfoot done wrong.<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;td&gt;</span>I'm a table with tfoot done wrong.<span class="nt">&lt;/td&gt;</span>
     <span class="nt">&lt;/tr&gt;</span>
-  <span class="nt">&lt;tbody&gt;</span>
+  <span class="nt">&lt;/tbody&gt;</span>
   <span class="nt">&lt;tfoot&gt;</span>
-    <span class="nt">&lt;th&gt;</span>I'm a table with tfoot done wrong.<span class="nt">&lt;/th&gt;</span>
-    <span class="nt">&lt;th&gt;</span>I'm a table with tfoot done wrong.<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;th</span> <span class="na">id=</span><span class="s">"th-1"</span><span class="nt">&gt;</span>I'm a table with tfoot done wrong.<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;th</span> <span class="na">id=</span><span class="s">"th-2"</span><span class="nt">&gt;</span>I'm a table with tfoot done wrong.<span class="nt">&lt;/th&gt;</span>
   <span class="nt">&lt;/tfoot&gt;</span>
 <span class="nt">&lt;/table&gt;</span>
 </pre></div></div></div>
