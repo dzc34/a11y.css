@@ -456,6 +456,7 @@ You could use a <code>[title]</code>, for example.</p>
         var $href = $hrefstart + $hreflang + $hreflevel + $hrefend;
 
         $(".bookmarklet").attr("href", $href);
+        $(".bookmarklet").addClass("done");
       });
       
       $(document).ready(function() {
@@ -470,6 +471,10 @@ You could use a <code>[title]</code>, for example.</p>
       $("ol.mb3 a").on("click", function() {
         $(".active-test").removeAttr("class");
         $(this).addClass("active-test");
+      });
+      
+      $("#bookmarklet *").on("focus", function() {
+        $(".bookmarklet").removeClass("done");
       });
     </script>
   </body>
