@@ -232,11 +232,13 @@ That should be double-checked.</p>
 <h1 id="empty-nodes">Most of DOM nodes shouldn't be :empty</h1>
 
 <p>Obviously void elements are empty, as well as <code>&lt;iframe&gt;</code> and <code>&lt;textarea&gt;</code> could be <code>:empty</code>.
-Any other empty tag is probably useless, and should be deleted.</p>
+Any other <code>:empty</code> or <code>:blank</code> tag that is not hidden is probably useless, and should be deleted.</p>
 
 <ul>
 <li><a href="https://github.com/Heydon/REVENGE.CSS/blob/master/revenge.css#L243">https://github.com/Heydon/REVENGE.CSS/blob/master/revenge.css#L243</a></li>
 <li><a href="http://www.w3.org/TR/html-markup/syntax.html#void-element">http://www.w3.org/TR/html-markup/syntax.html#void-element</a></li>
+<li><a href="http://dev.w3.org/csswg/selectors-4/#the-blank-pseudo">http://dev.w3.org/csswg/selectors-4/#the-blank-pseudo</a></li>
+<li><a href="https://css-tricks.com/almanac/selectors/b/blank/">https://css-tricks.com/almanac/selectors/b/blank/</a></li>
 </ul>
 <div class="codeExample"><div class="exampleOutput"><p id="empty-node_code"></p>
 </div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"empty-node_code"</span><span class="nt">&gt;&lt;/p&gt;</span>
@@ -412,6 +414,8 @@ Any other imbrication may be a crime somewhere.</p>
 
 <ul>
 <li><a href="https://github.com/yahoo/debugCSS/blob/master/debugCSS.css#L277">https://github.com/yahoo/debugCSS/blob/master/debugCSS.css#L277</a></li>
+<li><a href="http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-fieldset-element">http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-fieldset-element</a></li>
+<li><a href="http://www.w3.org/TR/html5/forms.html#the-fieldset-element">http://www.w3.org/TR/html5/forms.html#the-fieldset-element</a></li>
 </ul>
 <div class="codeExample"><div class="exampleOutput"><option>I'm an option. Am I?</option>
 <legend>I'm an legend. Am I?</legend>
