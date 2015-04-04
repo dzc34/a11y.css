@@ -156,166 +156,406 @@
           
       <div>
 
-<h1 id="duplicate-roles">Duplicated roles</h1>
+<h1 id="duplicate-roles" class="styleguide">Duplicated roles</h1>
 
-<p>Some ARIA roles should be unique: at least [main], [search], [banner], [contentinfo].</p>
-
-<ul>
-<li><a href="http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-12-10">http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-12-10</a></li>
+<h2>Description</h2>
+<p class="styleguide">Some ARIA roles should be unique: at least <code class="styleguide">[main]</code>, <code class="styleguide">[search]</code>, <code class="styleguide">[banner]</code>, <code class="styleguide">[contentinfo]</code>.</p>
+<h2>References</h2>
+<ul class="styleguide"><li><a href="http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-12-10">http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-12-10</a></li>
 <li><a href="http://www.w3.org/TR/WCAG20/#navigation-mechanisms-skip">http://www.w3.org/TR/WCAG20/#navigation-mechanisms-skip</a></li>
 </ul>
-<div class="codeExample"><div class="exampleOutput"><main role="main"><br /></main>
+<h2>Selector</h2>
+<div class="codeBlock">
+  <div class="highlight">
+    <pre>[role="main"] ~ [role="main"],
+[role="search"] ~ [role="search"],
+[role="banner"] ~ [role="banner"],
+[role="contentinfo"] ~ [role="contentinfo"]</pre>
+  </div>
+</div>
+<h2>Test</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <main role="main"><br /></main>
 <div role="main"><br /></div>
-</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;main</span> <span class="na">role=</span><span class="s">"main"</span><span class="nt">&gt;&lt;br</span> <span class="nt">/&gt;&lt;/main&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">role=</span><span class="s">"main"</span><span class="nt">&gt;&lt;br</span> <span class="nt">/&gt;&lt;/div&gt;</span>
-</pre></div></div></div>
-<h1 id="empty-class">Empty [class] attribute</h1>
 
-<p><code>[class]</code> shouldn&#39;t be present if empty. Something to improve, right?</p>
-<div class="codeExample"><div class="exampleOutput"><b class="">Why is there a class here?</b>
-</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">""</span><span class="nt">&gt;</span>Why is there a class here?<span class="nt">&lt;/b&gt;</span>
-</pre></div></div></div>
-<h1 id="empty-id">Empty [id] attribute</h1>
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;main</span> <span class="na">role=</span><span class="s">"main"</span><span class="nt">&gt;&lt;br</span> <span class="nt">/&gt;&lt;/main&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">role=</span><span class="s">"main"</span><span class="nt">&gt;&lt;br</span> <span class="nt">/&gt;&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
 
-<p><code>[id]</code> shouldn&#39;t be present if empty. You&#39;ll thank me later.</p>
-<div class="codeExample"><div class="exampleOutput"><i id="">Wait. Why is my ID empty?</i>
-</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;i</span> <span class="na">id=</span><span class="s">""</span><span class="nt">&gt;</span>Wait. Why is my ID empty?<span class="nt">&lt;/i&gt;</span>
-</pre></div></div></div>
-<h1 id="figcaption">A second figcaption tag</h1>
+<h1 id="empty-class" class="styleguide">Empty [class] attribute</h1>
 
-<p><code>&lt;figcaption&gt;</code> should be single inside its parent. Check the spec!</p>
+<h2>Description</h2>
+<p class="styleguide"><code class="styleguide">[class]</code> shouldn&#39;t be present if empty. Something to improve, right?</p>
+<h2>Selector</h2>
+<div class="codeBlock">
+  <div class="highlight">
+    <pre>[class=""]</pre>
+  </div>
+</div>
+<h2>Test</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <b class="">Why is there a class here?</b>
 
-<ul>
-<li><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-figure-element">http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-figure-element</a></li>
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">""</span><span class="nt">&gt;</span>Why is there a class here?<span class="nt">&lt;/b&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="empty-id" class="styleguide">Empty [id] attribute</h1>
+
+<h2>Description</h2>
+<p class="styleguide"><code class="styleguide">[id]</code> shouldn&#39;t be present if empty. You&#39;ll thank me later.</p>
+<h2>Selector</h2>
+<div class="codeBlock">
+  <div class="highlight">
+    <pre>[id=""]</pre>
+  </div>
+</div>
+<h2>Test</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <i id="">Wait. Why is my ID empty?</i>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;i</span> <span class="na">id=</span><span class="s">""</span><span class="nt">&gt;</span>Wait. Why is my ID empty?<span class="nt">&lt;/i&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="figcaption" class="styleguide">A second figcaption tag</h1>
+
+<h2>Description</h2>
+<p class="styleguide"><code class="styleguide">&lt;figcaption&gt;</code> should be single inside its parent. Check the spec!</p>
+<h2>References</h2>
+<ul class="styleguide"><li><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-figure-element">http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-figure-element</a></li>
 </ul>
-<div class="codeExample"><div class="exampleOutput"><figure role="group">
+<h2>Selector</h2>
+<div class="codeBlock">
+  <div class="highlight">
+    <pre>figcaption:not(:only-of-type)</pre>
+  </div>
+</div>
+<h2>Test</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <figure role="group">
   <figcaption>I'm the caption.</figcaption>
   <img src="static/ffoodd.png" alt="Needed" width="144" height="144" />
   <figcaption>I'm the caption too.</figcaption>
 </figure>
-</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;figure</span> <span class="na">role=</span><span class="s">"group"</span><span class="nt">&gt;</span>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;figure</span> <span class="na">role=</span><span class="s">"group"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;figcaption&gt;</span>I'm the caption.<span class="nt">&lt;/figcaption&gt;</span>
   <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"static/ffoodd.png"</span> <span class="na">alt=</span><span class="s">"Needed"</span> <span class="na">width=</span><span class="s">"144"</span> <span class="na">height=</span><span class="s">"144"</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;figcaption&gt;</span>I'm the caption too.<span class="nt">&lt;/figcaption&gt;</span>
-<span class="nt">&lt;/figure&gt;</span>
-</pre></div></div></div>
-<h1 id="figcaption-order">figcaption order</h1>
+<span class="nt">&lt;/figure&gt;</span></pre>
+    </div>
+  </div>
+</div>
 
-<p><code>&lt;figcaption&gt;</code> should be first or last child. Nothing else.</p>
+<h1 id="figcaption-order" class="styleguide">figcaption order</h1>
 
-<ul>
-<li><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-figure-element">http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-figure-element</a></li>
+<h2>Description</h2>
+<p class="styleguide"><code class="styleguide">&lt;figcaption&gt;</code> should be first or last child. Nothing else.</p>
+<h2>References</h2>
+<ul class="styleguide"><li><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-figure-element">http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-figure-element</a></li>
 </ul>
-<div class="codeExample"><div class="exampleOutput"><figure role="group">
+<h2>Selector</h2>
+<div class="codeBlock">
+  <div class="highlight">
+    <pre>figcaption:not(:first-child):not(:last-child)</pre>
+  </div>
+</div>
+<h2>Test</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <figure role="group">
   <img src="static/ffoodd.png" alt="Needed" width="144" height="144" />
   <figcaption>I'm the caption.</figcaption>
   <p>I'm something else. Oh, wait.</p>
 </figure>
-</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;figure</span> <span class="na">role=</span><span class="s">"group"</span><span class="nt">&gt;</span>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;figure</span> <span class="na">role=</span><span class="s">"group"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"static/ffoodd.png"</span> <span class="na">alt=</span><span class="s">"Needed"</span> <span class="na">width=</span><span class="s">"144"</span> <span class="na">height=</span><span class="s">"144"</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;figcaption&gt;</span>I'm the caption.<span class="nt">&lt;/figcaption&gt;</span>
   <span class="nt">&lt;p&gt;</span>I'm something else. Oh, wait.<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;/figure&gt;</span>
-</pre></div></div></div>
-<h1 id="file-format">Linking to a file</h1>
+<span class="nt">&lt;/figure&gt;</span></pre>
+    </div>
+  </div>
+</div>
 
-<p>A link to a file should indicate the file format, the file size and if different from the main document, the file language.</p>
+<h1 id="file-format" class="styleguide">Linking to a file</h1>
 
-<ul>
-<li><a href="http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-13-6">http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-13-6</a></li>
+<h2>Description</h2>
+<p class="styleguide">A link to a file should indicate the file format, the file size and if different from the main document, the file language.</p>
+<h2>References</h2>
+<ul class="styleguide"><li><a href="http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-13-6">http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-13-6</a></li>
 <li><a href="http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-13-7">http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-13-7</a></li>
 <li><a href="http://www.w3.org/TR/WCAG20/#navigation-mechanisms-refs">http://www.w3.org/TR/WCAG20/#navigation-mechanisms-refs</a></li>
 <li><a href="http://www.w3.org/TR/WCAG-TECHS/H33.html">http://www.w3.org/TR/WCAG-TECHS/H33.html</a></li>
 </ul>
-<div class="codeExample"><div class="exampleOutput"><a href="/file.png">Wanna file?</a>
-</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/file.png"</span><span class="nt">&gt;</span>Wanna file?<span class="nt">&lt;/a&gt;</span>
-</pre></div></div></div>
-<h1 id="hidden">Not :empty [hidden] things</h1>
+<h2>Selector</h2>
+<div class="codeBlock">
+  <div class="highlight">
+    <pre>[download],
+[href$=".pdf"],
+[href$=".doc"],
+[href$=".png"],
+[href$=".jpg"],
+[href$=".gif"],
+[href$=".mp3"],
+[href$=".mp4"],
+[href$=".mov"],
+[href$=".ogg"],
+[href$=".xls"],
+[href$=".txt"],
+[href$=".zip"],
+[href$=".rar"],
+[href$=".docx"]</pre>
+  </div>
+</div>
+<h2>Test</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <a href="/file.png">Wanna file?</a>
 
-<p>A <code>[hidden]</code> or <code>[aria-hidden]</code> may not be a good idea if hiding content.</p>
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/file.png"</span><span class="nt">&gt;</span>Wanna file?<span class="nt">&lt;/a&gt;</span></pre>
+    </div>
+  </div>
+</div>
 
-<ul>
-<li><a href="http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-10-13">http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-10-13</a></li>
+<h1 id="hidden" class="styleguide">Not :empty [hidden] things</h1>
+
+<h2>Description</h2>
+<p class="styleguide">A <code class="styleguide">[hidden]</code> or <code class="styleguide">[aria-hidden]</code> may not be a good idea if hiding content.</p>
+<h2>References</h2>
+<ul class="styleguide"><li><a href="http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-10-13">http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-10-13</a></li>
 <li><a href="http://www.w3.org/TR/WCAG20/#ensure-compat-rsv">http://www.w3.org/TR/WCAG20/#ensure-compat-rsv</a></li>
 </ul>
-<div class="codeExample"><div class="exampleOutput"><a href="/" aria-hidden="true">Important thing!</a>
-</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>Important thing!<span class="nt">&lt;/a&gt;</span>
-</pre></div></div></div>
-<h1 id="mailto">An email link should be valid</h1>
+<h2>Selector</h2>
+<div class="codeBlock">
+  <div class="highlight">
+    <pre></pre>
+  </div>
+</div>
+<h2>Test</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <a href="/" aria-hidden="true">Important thing!</a>
 
-<p>A <code>&lt;href=&quot;mailto:&quot;&gt;</code> should contain a valid email.
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>Important thing!<span class="nt">&lt;/a&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="mailto" class="styleguide">An email link should be valid</h1>
+
+<h2>Description</h2>
+<p class="styleguide">A <code class="styleguide">&lt;href=&quot;mailto:&quot;&gt;</code> should contain a valid email.
 Otherwise you may annoy your users.</p>
-<div class="codeExample"><div class="exampleOutput"><a href="mailto:myself">Surpri-ise!</a>
-</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"mailto:myself"</span><span class="nt">&gt;</span>Surpri-ise!<span class="nt">&lt;/a&gt;</span>
-</pre></div></div></div>
-<h1 id="main">A second main tag</h1>
+<h2>Selector</h2>
+<div class="codeBlock">
+  <div class="highlight">
+    <pre>[href^="mailto"]</pre>
+  </div>
+</div>
+<h2>Test</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <a href="mailto:myself">Surpri-ise!</a>
 
-<p><code>&lt;main&gt;</code> should be unique. Isn&#39;t that obvious?</p>
-<div class="codeExample"><div class="exampleOutput"><main>I'm the main content!</main>
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"mailto:myself"</span><span class="nt">&gt;</span>Surpri-ise!<span class="nt">&lt;/a&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="main" class="styleguide">A second main tag</h1>
+
+<h2>Description</h2>
+<p class="styleguide"><code class="styleguide">&lt;main&gt;</code> should be unique. Isn&#39;t that obvious?</p>
+<h2>Selector</h2>
+<div class="codeBlock">
+  <div class="highlight">
+    <pre>main:not(:first-of-type)</pre>
+  </div>
+</div>
+<h2>Test</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <main>I'm the main content!</main>
 <main>No, It's me!</main>
-</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;main&gt;</span>I'm the main content!<span class="nt">&lt;/main&gt;</span>
-<span class="nt">&lt;main&gt;</span>No, It's me!<span class="nt">&lt;/main&gt;</span>
-</pre></div></div></div>
-<h1 id="placeholder">Placeholder can't replace a label</h1>
 
-<p>A <code>[placeholder]</code> is not a label, isn&#39;t it?</p>
-<div class="codeExample"><div class="exampleOutput"><input type="text" placeholder="Look Ma, no label!" id="test"><i> </i>
-</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Look Ma, no label!"</span> <span class="na">id=</span><span class="s">"test"</span><span class="nt">&gt;&lt;i&gt;</span> <span class="nt">&lt;/i&gt;</span>
-</pre></div></div></div>
-<h1 id="required">Does this look like [required]?</h1>
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;main&gt;</span>I'm the main content!<span class="nt">&lt;/main&gt;</span>
+<span class="nt">&lt;main&gt;</span>No, It's me!<span class="nt">&lt;/main&gt;</span></pre>
+    </div>
+  </div>
+</div>
 
-<p>A <code>[required]</code> or <code>[aria-required]</code> should be visually understandable.</p>
+<h1 id="placeholder" class="styleguide">Placeholder can't replace a label</h1>
 
-<ul>
-<li><a href="http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-11-10">http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-11-10</a></li>
+<h2>Description</h2>
+<p class="styleguide">A <code class="styleguide">[placeholder]</code> is not a label, isn&#39;t it?</p>
+<h2>Selector</h2>
+<div class="codeBlock">
+  <div class="highlight">
+    <pre></pre>
+  </div>
+</div>
+<h2>Test</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <input type="text" placeholder="Look Ma, no label!" id="test"><i> </i>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Look Ma, no label!"</span> <span class="na">id=</span><span class="s">"test"</span><span class="nt">&gt;&lt;i&gt;</span> <span class="nt">&lt;/i&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="required" class="styleguide">Does this look like [required]?</h1>
+
+<h2>Description</h2>
+<p class="styleguide">A <code class="styleguide">[required]</code> or <code class="styleguide">[aria-required]</code> should be visually understandable.</p>
+<h2>References</h2>
+<ul class="styleguide"><li><a href="http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-11-10">http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-11-10</a></li>
 <li><a href="http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#test-11-10-2">http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#test-11-10-2</a></li>
 <li><a href="http://www.w3.org/TR/WCAG20/#minimize-error-cues">http://www.w3.org/TR/WCAG20/#minimize-error-cues</a></li>
 </ul>
-<div class="codeExample"><div class="exampleOutput"><form action="">
+<h2>Selector</h2>
+<div class="codeBlock">
+  <div class="highlight">
+    <pre>[required],
+[aria-required]</pre>
+  </div>
+</div>
+<h2>Test</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <form action="">
   <label for="field">Fied</label>
   <textarea id="field" required></textarea><i> </i>
 </form>
-</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span><span class="nt">&gt;</span>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span><span class="nt">&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"field"</span><span class="nt">&gt;</span>Fied<span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;textarea</span> <span class="na">id=</span><span class="s">"field"</span> <span class="na">required</span><span class="nt">&gt;&lt;/textarea&gt;&lt;i&gt;</span> <span class="nt">&lt;/i&gt;</span>
-<span class="nt">&lt;/form&gt;</span>
-</pre></div></div></div>
-<h1 id="role-button">button [role] on a link</h1>
+<span class="nt">&lt;/form&gt;</span></pre>
+    </div>
+  </div>
+</div>
 
-<p>Obviously, a button role on a link is probably not so hard to move to an authentic button tag, isn&#39;t it?</p>
+<h1 id="role-button" class="styleguide">button [role] on a link</h1>
 
-<ul>
-<li><a href="https://github.com/Heydon/REVENGE.CSS/blob/master/revenge.css#L174">https://github.com/Heydon/REVENGE.CSS/blob/master/revenge.css#L174</a></li>
+<h2>Description</h2>
+<p class="styleguide">Obviously, a button role on a link is probably not so hard to move to an authentic button tag, isn&#39;t it?</p>
+<h2>References</h2>
+<ul class="styleguide"><li><a href="https://github.com/Heydon/REVENGE.CSS/blob/master/revenge.css#L174">https://github.com/Heydon/REVENGE.CSS/blob/master/revenge.css#L174</a></li>
 </ul>
-<div class="codeExample"><div class="exampleOutput"><a href="/" role="button">Submit</a>
-</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>Submit<span class="nt">&lt;/a&gt;</span>
-</pre></div></div></div>
-<h1 id="search">May have a search [role]?</h1>
+<h2>Selector</h2>
+<div class="codeBlock">
+  <div class="highlight">
+    <pre>a[role="button"]</pre>
+  </div>
+</div>
+<h2>Test</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <a href="/" role="button">Submit</a>
 
-<p>A <code>[class]</code> or <code>[id]</code> containing search may carry the search ARIA <code>[role]</code>.</p>
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>Submit<span class="nt">&lt;/a&gt;</span></pre>
+    </div>
+  </div>
+</div>
 
-<ul>
-<li><a href="http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-12-10">http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-12-10</a></li>
+<h1 id="search" class="styleguide">May have a search [role]?</h1>
+
+<h2>Description</h2>
+<p class="styleguide">A <code class="styleguide">[class]</code> or <code class="styleguide">[id]</code> containing search may carry the search ARIA <code class="styleguide">[role]</code>.</p>
+<h2>References</h2>
+<ul class="styleguide"><li><a href="http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-12-10">http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-12-10</a></li>
 <li><a href="http://www.w3.org/TR/WCAG20/#navigation-mechanisms-skip">http://www.w3.org/TR/WCAG20/#navigation-mechanisms-skip</a></li>
 </ul>
-<div class="codeExample"><div class="exampleOutput"><form class="search" action="">
+<h2>Selector</h2>
+<div class="codeBlock">
+  <div class="highlight">
+    <pre></pre>
+  </div>
+</div>
+<h2>Test</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <form class="search" action="">
   <label for="field">Search</label>
   <input type="search" id="field" /><i> </i>
 </form>
-</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"search"</span> <span class="na">action=</span><span class="s">""</span><span class="nt">&gt;</span>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"search"</span> <span class="na">action=</span><span class="s">""</span><span class="nt">&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"field"</span><span class="nt">&gt;</span>Search<span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"search"</span> <span class="na">id=</span><span class="s">"field"</span> <span class="nt">/&gt;&lt;i&gt;</span> <span class="nt">&lt;/i&gt;</span>
-<span class="nt">&lt;/form&gt;</span>
-</pre></div></div></div>
-<h1 id="table-presentation">Layout table in use</h1>
+<span class="nt">&lt;/form&gt;</span></pre>
+    </div>
+  </div>
+</div>
 
-<p>A <code>[role=&quot;presentation&quot;]</code> is a good idea for any <code>&lt;table&gt;</code> used for layout, but a bad thing for a data table. Double check this!</p>
+<h1 id="table-presentation" class="styleguide">Layout table in use</h1>
 
-<ul>
-<li><a href="http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-5-3">http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-5-3</a></li>
+<h2>Description</h2>
+<p class="styleguide">A <code class="styleguide">[role=&quot;presentation&quot;]</code> is a good idea for any <code class="styleguide">&lt;table&gt;</code> used for layout, but a bad thing for a data table. Double check this!</p>
+<h2>References</h2>
+<ul class="styleguide"><li><a href="http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-5-3">http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-5-3</a></li>
 <li><a href="http://www.w3.org/TR/WCAG20/#content-structure-separation-sequence">http://www.w3.org/TR/WCAG20/#content-structure-separation-sequence</a></li>
 </ul>
-<div class="codeExample"><div class="exampleOutput"><table role="presentation">
+<h2>Selector</h2>
+<div class="codeBlock">
+  <div class="highlight">
+    <pre>table[role="presentation"]</pre>
+  </div>
+</div>
+<h2>Test</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <table role="presentation">
   <tr>
     <td>First cell</td>
     <td>Second cell</td>
@@ -325,7 +565,11 @@ Otherwise you may annoy your users.</p>
     <td>Second cell</td>
   </tr>
 </table>
-</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;table</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;</span>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;table</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;tr&gt;</span>
     <span class="nt">&lt;td&gt;</span>First cell<span class="nt">&lt;/td&gt;</span>
     <span class="nt">&lt;td&gt;</span>Second cell<span class="nt">&lt;/td&gt;</span>
@@ -334,34 +578,62 @@ Otherwise you may annoy your users.</p>
     <span class="nt">&lt;td&gt;</span>First cell<span class="nt">&lt;/td&gt;</span>
     <span class="nt">&lt;td&gt;</span>Second cell<span class="nt">&lt;/td&gt;</span>
   <span class="nt">&lt;/tr&gt;</span>
-<span class="nt">&lt;/table&gt;</span>
-</pre></div></div></div>
-<h1 id="target-blank">A link opening new tab or window</h1>
+<span class="nt">&lt;/table&gt;</span></pre>
+    </div>
+  </div>
+</div>
 
-<p>A link opening new tab or window should warn user about its behaviour.
-You could use a <code>[title]</code>, for example.</p>
+<h1 id="target-blank" class="styleguide">A link opening new tab or window</h1>
 
-<ul>
-<li><a href="http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-13-2">http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-13-2</a></li>
+<h2>Description</h2>
+<p class="styleguide">A link opening new tab or window should warn user about its behaviour.
+You could use a <code class="styleguide">[title]</code>, for example.</p>
+<h2>References</h2>
+<ul class="styleguide"><li><a href="http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-13-2">http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-13-2</a></li>
 <li><a href="http://www.w3.org/TR/WCAG20/#navigation-mechanisms-refs">http://www.w3.org/TR/WCAG20/#navigation-mechanisms-refs</a></li>
 <li><a href="http://www.w3.org/TR/WCAG20/#consistent-behavior-no-extreme-changes-context">http://www.w3.org/TR/WCAG20/#consistent-behavior-no-extreme-changes-context</a></li>
 <li><a href="http://www.w3.org/TR/WCAG-TECHS/H33.html">http://www.w3.org/TR/WCAG-TECHS/H33.html</a></li>
 <li><a href="http://www.w3.org/TR/WCAG-TECHS/H83.html">http://www.w3.org/TR/WCAG-TECHS/H83.html</a></li>
 <li><a href="http://www.w3.org/TR/WCAG-TECHS/F22.html">http://www.w3.org/TR/WCAG-TECHS/F22.html</a></li>
 </ul>
-<div class="codeExample"><div class="exampleOutput"><a href="/" target="_blank">New tab</a>
-</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span> <span class="na">target=</span><span class="s">"_blank"</span><span class="nt">&gt;</span>New tab<span class="nt">&lt;/a&gt;</span>
-</pre></div></div></div>
-<h1 id="th-scope">[scope] should be either col or row</h1>
+<h2>Selector</h2>
+<div class="codeBlock">
+  <div class="highlight">
+    <pre>[target$="blank"]</pre>
+  </div>
+</div>
+<h2>Test</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <a href="/" target="_blank">New tab</a>
 
-<p>A <code>[scope]</code> can be col or row (and nothing else) and it has to be relevant.</p>
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span> <span class="na">target=</span><span class="s">"_blank"</span><span class="nt">&gt;</span>New tab<span class="nt">&lt;/a&gt;</span></pre>
+    </div>
+  </div>
+</div>
 
-<ul>
-<li><a href="http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-5-7">http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-5-7</a></li>
+<h1 id="th-scope" class="styleguide">[scope] should be either col or row</h1>
+
+<h2>Description</h2>
+<p class="styleguide">A <code class="styleguide">[scope]</code> can be col or row (and nothing else) and it has to be relevant.</p>
+<h2>References</h2>
+<ul class="styleguide"><li><a href="http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-5-7">http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-5-7</a></li>
 <li><a href="http://www.w3.org/TR/WCAG20/#content-structure-separation-programmatic">http://www.w3.org/TR/WCAG20/#content-structure-separation-programmatic</a></li>
 <li><a href="http://www.w3.org/TR/WCAG-TECHS/H63.html">http://www.w3.org/TR/WCAG-TECHS/H63.html</a></li>
 </ul>
-<div class="codeExample"><div class="exampleOutput"><table>
+<h2>Selector</h2>
+<div class="codeBlock">
+  <div class="highlight">
+    <pre>th[scope]</pre>
+  </div>
+</div>
+<h2>Test</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <table>
   <caption>I'm a caption</caption>
   <thead>
     <tr>
@@ -380,7 +652,11 @@ You could use a <code>[title]</code>, for example.</p>
     </tr>
   </tbody>
 </table>
-</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;table&gt;</span>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;table&gt;</span>
   <span class="nt">&lt;caption&gt;</span>I'm a caption<span class="nt">&lt;/caption&gt;</span>
   <span class="nt">&lt;thead&gt;</span>
     <span class="nt">&lt;tr&gt;</span>
@@ -398,39 +674,95 @@ You could use a <code>[title]</code>, for example.</p>
       <span class="nt">&lt;td&gt;</span>Second cell<span class="nt">&lt;/td&gt;</span>
     <span class="nt">&lt;/tr&gt;</span>
   <span class="nt">&lt;/tbody&gt;</span>
-<span class="nt">&lt;/table&gt;</span>
-</pre></div></div></div>
-<h1 id="time">Date and time should be understandable</h1>
+<span class="nt">&lt;/table&gt;</span></pre>
+    </div>
+  </div>
+</div>
 
-<p>A <code>&lt;time&gt;</code> or <code>[datetime]</code> content should be an understandable and well formated date.</p>
-<div class="codeExample"><div class="exampleOutput"><time>Yesterday</time>
-</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;time&gt;</span>Yesterday<span class="nt">&lt;/time&gt;</span>
-</pre></div></div></div>
-<h1 id="title">[title] should be equal to alternative</h1>
+<h1 id="time" class="styleguide">Date and time should be understandable</h1>
 
-<p>A <code>[title]</code> on any graphic content should be equal to <code>[aria-label]</code> or <code>[alt]</code>.</p>
+<h2>Description</h2>
+<p class="styleguide">A <code class="styleguide">&lt;time&gt;</code> or <code class="styleguide">[datetime]</code> content should be an understandable and well formated date.</p>
+<h2>Selector</h2>
+<div class="codeBlock">
+  <div class="highlight">
+    <pre>time,
+[datetime]</pre>
+  </div>
+</div>
+<h2>Test</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <time>Yesterday</time>
 
-<ul>
-<li><a href="http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-1-3">http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-1-3</a></li>
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;time&gt;</span>Yesterday<span class="nt">&lt;/time&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="title" class="styleguide">[title] should be equal to alternative</h1>
+
+<h2>Description</h2>
+<p class="styleguide">A <code class="styleguide">[title]</code> on any graphic content should be equal to <code class="styleguide">[aria-label]</code> or <code class="styleguide">[alt]</code>.</p>
+<h2>References</h2>
+<ul class="styleguide"><li><a href="http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-1-3">http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-1-3</a></li>
 <li><a href="http://www.w3.org/TR/WCAG20/#text-equiv-all">http://www.w3.org/TR/WCAG20/#text-equiv-all</a></li>
 </ul>
-<div class="codeExample"><div class="exampleOutput"><svg aria-label="I'm a label!" title="I'm a title!"></svg><i> </i>
-</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;svg</span> <span class="na">aria-label=</span><span class="s">"I'm a label!"</span> <span class="na">title=</span><span class="s">"I'm a title!"</span><span class="nt">&gt;&lt;/svg&gt;&lt;i&gt;</span> <span class="nt">&lt;/i&gt;</span>
-</pre></div></div></div>
-<h1 id="video-audio">video or audio things</h1>
+<h2>Selector</h2>
+<div class="codeBlock">
+  <div class="highlight">
+    <pre>img[alt][title],
+area[alt][title],
+svg[aria-label][title]</pre>
+  </div>
+</div>
+<h2>Test</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <svg aria-label="I'm a label!" title="I'm a title!"></svg><i> </i>
 
-<p>A <code>&lt;video&gt;</code> or <code>&lt;audio&gt;</code> needs a few things to be accessible, like a transcript, subtitles, controls. This kind of things.</p>
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;svg</span> <span class="na">aria-label=</span><span class="s">"I'm a label!"</span> <span class="na">title=</span><span class="s">"I'm a title!"</span><span class="nt">&gt;&lt;/svg&gt;&lt;i&gt;</span> <span class="nt">&lt;/i&gt;</span></pre>
+    </div>
+  </div>
+</div>
 
-<ul>
-<li><a href="http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-4-1">http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-4-1</a></li>
+<h1 id="video-audio" class="styleguide">video or audio things</h1>
+
+<h2>Description</h2>
+<p class="styleguide">A <code class="styleguide">&lt;video&gt;</code> or <code class="styleguide">&lt;audio&gt;</code> needs a few things to be accessible, like a transcript, subtitles, controls. This kind of things.</p>
+<h2>References</h2>
+<ul class="styleguide"><li><a href="http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-4-1">http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-4-1</a></li>
 <li><a href="http://www.w3.org/TR/WCAG20/#media-equiv-av-only-alt">http://www.w3.org/TR/WCAG20/#media-equiv-av-only-alt</a></li>
 <li><a href="http://www.w3.org/TR/WCAG20/#media-equiv-audio-desc">http://www.w3.org/TR/WCAG20/#media-equiv-audio-desc</a></li>
 <li><a href="http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-4-13">http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-4-13</a></li>
 <li><a href="http://www.w3.org/TR/WCAG20/#media-equiv-text-doc">http://www.w3.org/TR/WCAG20/#media-equiv-text-doc</a></li>
 </ul>
-<div class="codeExample"><div class="exampleOutput"><video src="/" controls></video><i> </i>
-</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;video</span> <span class="na">src=</span><span class="s">"/"</span> <span class="na">controls</span><span class="nt">&gt;&lt;/video&gt;&lt;i&gt;</span> <span class="nt">&lt;/i&gt;</span>
-</pre></div></div></div>      </div>
+<h2>Selector</h2>
+<div class="codeBlock">
+  <div class="highlight">
+    <pre>video,
+audio</pre>
+  </div>
+</div>
+<h2>Test</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <video src="/" controls></video><i> </i>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;video</span> <span class="na">src=</span><span class="s">"/"</span> <span class="na">controls</span><span class="nt">&gt;&lt;/video&gt;&lt;i&gt;</span> <span class="nt">&lt;/i&gt;</span></pre>
+    </div>
+  </div>
+</div>
+      </div>
     </main>
 
     <footer role="contentinfo" class="grid-1-2 mw--site center">
