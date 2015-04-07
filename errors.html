@@ -59,7 +59,7 @@
             </li>
           
             <li>
-              <a href="#empty-href"># [href]</a>
+              <a href="#empty-button-attr">Empty button attribute</a>
             </li>
           
             <li>
@@ -68,10 +68,6 @@
           
             <li>
               <a href="#empty-link">Empty link</a>
-            </li>
-          
-            <li>
-              <a href="#href-js">JS [href]</a>
             </li>
           
             <li>
@@ -186,7 +182,8 @@
 <p class="styleguide"><code class="styleguide">[width]</code> and <code class="styleguide">[height]</code> are presentation informations.
 Therefore it shouldn&#39;t be used in markup, except for <code class="styleguide">&lt;img&gt;</code>. Use CSS instead.</p>
 <h2>References</h2>
-<ul class="styleguide"><li><a href="http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-10-1">http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-10-1</a></li>
+<ul class="styleguide"><li><a href="http://references.modernisation.gouv.fr/sites/default/files/RGAA3_RC2-1/glossaire.html#PresInfo">http://references.modernisation.gouv.fr/sites/default/files/RGAA3_RC2-1/glossaire.html#PresInfo</a></li>
+<li><a href="http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-10-1">http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-10-1</a></li>
 <li><a href="http://www.accessiweb.org/index.php/glossaire-du-referentiel-accessiweb-html5aria.html#mPresInfo">http://www.accessiweb.org/index.php/glossaire-du-referentiel-accessiweb-html5aria.html#mPresInfo</a></li>
 <li><a href="http://www.w3.org/TR/WCAG20/#content-structure-sepffoodd.pngaration-programmatic">http://www.w3.org/TR/WCAG20/#content-structure-sepffoodd.pngaration-programmatic</a></li>
 <li><a href="http://www.w3.org/TR/WCAG20/#content-structure-separation-sequence">http://www.w3.org/TR/WCAG20/#content-structure-separation-sequence</a></li>
@@ -194,8 +191,8 @@ Therefore it shouldn&#39;t be used in markup, except for <code class="styleguide
 <h2>Selector</h2>
 <div class="codeBlock">
   <div class="highlight">
-    <pre>:not(img):not(iframe)[width],
-:not(img):not(iframe)[height]</pre>
+    <pre>:not(img):not(object):not(embed):not(svg):not(canvas)[width],
+:not(img):not(object):not(embed):not(svg):not(canvas)[height]</pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -241,9 +238,10 @@ Use <code class="styleguide">[disabled]</code> and <code class="styleguide">[rea
 <h1 id="empty-button" class="styleguide">Empty button</h1>
 
 <h2>Description</h2>
-<p class="styleguide">A <code class="styleguide">&lt;button&gt;</code> should either have content or an <code class="styleguide">[aria-label]</code> or <code class="styleguide">[aria-labelledby]</code>.</p>
+<p class="styleguide">A <code class="styleguide">&lt;button&gt;</code> should either have content or an <code class="styleguide">[aria-label]</code>, <code class="styleguide">[aria-labelledby]</code> or <code class="styleguide">[title]</code>. Those attributes, if present, should not be empty.</p>
 <h2>References</h2>
-<ul class="styleguide"><li><a href="http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-11-9">http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-11-9</a></li>
+<ul class="styleguide"><li><a href="http://references.modernisation.gouv.fr/sites/default/files/RGAA3_RC2-1/referentiel_technique.htm#formulaire">http://references.modernisation.gouv.fr/sites/default/files/RGAA3_RC2-1/referentiel_technique.htm#formulaire</a></li>
+<li><a href="http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-11-9">http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-11-9</a></li>
 <li><a href="http://www.w3.org/TR/WCAG20/#ensure-compat-rsv">http://www.w3.org/TR/WCAG20/#ensure-compat-rsv</a></li>
 <li><a href="http://www.w3.org/TR/WCAG-TECHS/H91.html">http://www.w3.org/TR/WCAG-TECHS/H91.html</a></li>
 <li><a href="https://github.com/Heydon/REVENGE.CSS/blob/master/revenge.css#L193">https://github.com/Heydon/REVENGE.CSS/blob/master/revenge.css#L193</a></li>
@@ -251,8 +249,17 @@ Use <code class="styleguide">[disabled]</code> and <code class="styleguide">[rea
 <h2>Selector</h2>
 <div class="codeBlock">
   <div class="highlight">
-    <pre>button:empty:not([aria-label]):not([aria-labelledby]),
-button:not([aria-label]):not([aria-labelledby]) img:only-child:not([alt])</pre>
+    <pre>button[title=""],
+button[aria-label=""],
+button[aria-labelledby=""],
+button[title=""] img:only-child[alt=""],
+button[title=""] img:only-child:not([alt]),
+button[aria-label=""] img:only-child[alt=""],
+button[aria-label=""] img:only-child:not([alt]),
+button[aria-labelledby=""] img:only-child[alt=""],
+button[aria-labelledby=""] img:only-child:not([alt]),
+button:not([aria-label]):not([aria-labelledby]):not([title]) img:only-child[alt=""],
+button:not([aria-label]):not([aria-labelledby]):not([title]) img:only-child:not([alt])</pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -276,30 +283,48 @@ button:not([aria-label]):not([aria-labelledby]) img:only-child:not([alt])</pre>
   </div>
 </div>
 
-<h1 id="empty-href" class="styleguide"># [href]</h1>
+<h1 id="empty-button-attr" class="styleguide">Empty button attribute</h1>
 
 <h2>Description</h2>
-<p class="styleguide">The <code class="styleguide">[href]</code> attribute is only containing <code class="styleguide">#</code>.
-Should probably be a <code class="styleguide">&lt;button&gt;</code> again, don&#39;t you think?</p>
+<p class="styleguide"><code class="styleguide">[aria-label]</code>, <code class="styleguide">[aria-labelledby]</code> or <code class="styleguide">[title]</code> on a <code class="styleguide">&lt;button&gt;</code> must not be empty.</p>
 <h2>References</h2>
-<ul class="styleguide"><li><a href="https://github.com/Heydon/REVENGE.CSS/blob/master/revenge.css#L165">https://github.com/Heydon/REVENGE.CSS/blob/master/revenge.css#L165</a></li>
-<li><a href="https://github.com/yahoo/debugCSS/blob/master/debugCSS.css#L386">https://github.com/yahoo/debugCSS/blob/master/debugCSS.css#L386</a></li>
+<ul class="styleguide"><li><a href="http://references.modernisation.gouv.fr/sites/default/files/RGAA3_RC2-1/referentiel_technique.htm#formulaire">http://references.modernisation.gouv.fr/sites/default/files/RGAA3_RC2-1/referentiel_technique.htm#formulaire</a></li>
+<li><a href="http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-11-9">http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-11-9</a></li>
+<li><a href="http://www.w3.org/TR/WCAG20/#ensure-compat-rsv">http://www.w3.org/TR/WCAG20/#ensure-compat-rsv</a></li>
+<li><a href="http://www.w3.org/TR/WCAG-TECHS/H91.html">http://www.w3.org/TR/WCAG-TECHS/H91.html</a></li>
+<li><a href="https://github.com/Heydon/REVENGE.CSS/blob/master/revenge.css#L193">https://github.com/Heydon/REVENGE.CSS/blob/master/revenge.css#L193</a></li>
 </ul>
 <h2>Selector</h2>
 <div class="codeBlock">
   <div class="highlight">
-    <pre>a[href="#"]</pre>
+    <pre>button[title=""],
+button[aria-label=""],
+button[aria-labelledby=""],
+button[title=""] img:only-child[alt=""],
+button[title=""] img:only-child:not([alt]),
+button[aria-label=""] img:only-child[alt=""],
+button[aria-label=""] img:only-child:not([alt]),
+button[aria-labelledby=""] img:only-child[alt=""],
+button[aria-labelledby=""] img:only-child:not([alt])</pre>
   </div>
 </div>
 <h2>Test</h2>
 <div class="codeExample">
   <div class="exampleOutput">
-    <a href="#">Oh boy, I don't mean anything</a>
+    <button ttle=""></button>
+<button aria-label="">
+  <img src="static/ffoodd.png" width="144" height="144" />
+  <i> </i>
+</button>
 
   </div>
   <div class="codeBlock">
     <div class="highlight">
-      <pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Oh boy, I don't mean anything<span class="nt">&lt;/a&gt;</span></pre>
+      <pre><span class="nt">&lt;button</span> <span class="na">ttle=</span><span class="s">""</span><span class="nt">&gt;&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">aria-label=</span><span class="s">""</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"static/ffoodd.png"</span> <span class="na">width=</span><span class="s">"144"</span> <span class="na">height=</span><span class="s">"144"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;i&gt;</span> <span class="nt">&lt;/i&gt;</span>
+<span class="nt">&lt;/button&gt;</span></pre>
     </div>
   </div>
 </div>
@@ -371,34 +396,6 @@ By the way, why would you use an empty link?</p>
   <div class="codeBlock">
     <div class="highlight">
       <pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span> <span class="na">class=</span><span class="s">"inbl w-20"</span> <span class="na">id=</span><span class="s">"empty-link_code"</span><span class="nt">&gt;&lt;/a&gt;</span></pre>
-    </div>
-  </div>
-</div>
-
-<h1 id="href-js" class="styleguide">JS [href]</h1>
-
-<h2>Description</h2>
-<p class="styleguide">The <code class="styleguide">[href]</code> attribute should not start with &quot;javascript&quot;.
-Should probably be a <code class="styleguide">&lt;button&gt;</code>, don&#39;t you think?</p>
-<h2>References</h2>
-<ul class="styleguide"><li><a href="https://github.com/Heydon/REVENGE.CSS/blob/master/revenge.css#L165">https://github.com/Heydon/REVENGE.CSS/blob/master/revenge.css#L165</a></li>
-<li><a href="https://github.com/yahoo/debugCSS/blob/master/debugCSS.css#L392">https://github.com/yahoo/debugCSS/blob/master/debugCSS.css#L392</a></li>
-</ul>
-<h2>Selector</h2>
-<div class="codeBlock">
-  <div class="highlight">
-    <pre>a[href^="javascript"]</pre>
-  </div>
-</div>
-<h2>Test</h2>
-<div class="codeExample">
-  <div class="exampleOutput">
-    <a href="javascript:(function(){a11ycss=document.createElement('LINK');a11ycss.href='https://rawgit.com/ffoodd/a11y.css/master/css/a11y-en.css';a11ycss.rel='stylesheet';a11ycss.media='all';document.body.appendChild(a11ycss);})();">Please use my bookmarklet ;)</a>
-
-  </div>
-  <div class="codeBlock">
-    <div class="highlight">
-      <pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"javascript:(function(){a11ycss=document.createElement('LINK');a11ycss.href='https://rawgit.com/ffoodd/a11y.css/master/css/a11y-en.css';a11ycss.rel='stylesheet';a11ycss.media='all';document.body.appendChild(a11ycss);})();"</span><span class="nt">&gt;</span>Please use my bookmarklet ;)<span class="nt">&lt;/a&gt;</span></pre>
     </div>
   </div>
 </div>
