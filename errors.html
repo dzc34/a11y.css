@@ -626,7 +626,8 @@ label[for=""]</pre>
 <h1 id="no-href" class="styleguide">No [href]</h1>
 
 <h2>Description</h2>
-<p class="styleguide">The <code class="styleguide">[href]</code> attribute should never be empty. A link <em>to</em> something, right?</p>
+<p class="styleguide">The <code class="styleguide">[href]</code> attribute, if present, should not be empty. A link <em>to</em> something, right?
+However a link may be an anchor, using <code class="styleguide">[name]</code> or <code class="styleguide">[id]</code>.</p>
 <h2>References</h2>
 <ul class="styleguide"><li><a href="https://github.com/Heydon/REVENGE.CSS/blob/master/revenge.css#L161">https://github.com/Heydon/REVENGE.CSS/blob/master/revenge.css#L161</a></li>
 <li><a href="https://github.com/Heydon/REVENGE.CSS/blob/master/revenge.css#L165">https://github.com/Heydon/REVENGE.CSS/blob/master/revenge.css#L165</a></li>
@@ -635,8 +636,13 @@ label[for=""]</pre>
 <h2>Selector</h2>
 <div class="codeBlock">
   <div class="highlight">
-    <pre>a:not([href]),
-a[href=""]</pre>
+    <pre>a[name=""][id=""][href=""],
+a:not([name])[id=""][href=""],
+a[name=""]:not([id])[href=""],
+a:not([name])[id=""]:not([href]),
+a[name=""]:not([id]):not([href]),
+a:not([name]):not([id])[href=""],
+a:not([name]):not([id]):not([href])</pre>
   </div>
 </div>
 <h2>Test</h2>
