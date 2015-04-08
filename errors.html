@@ -248,33 +248,18 @@ Use <code class="styleguide">[disabled]</code> and <code class="styleguide">[rea
     <pre>button[title=""],
 button[aria-label=""],
 button[aria-labelledby=""],
-button[title=""] img:only-child[alt=""],
-button[title=""] img:only-child:not([alt]),
-button[aria-label=""] img:only-child[alt=""],
-button[aria-label=""] img:only-child:not([alt]),
-button[aria-labelledby=""] img:only-child[alt=""],
-button[aria-labelledby=""] img:only-child:not([alt]),
-button:not([aria-label]):not([aria-labelledby]):not([title]) img:only-child[alt=""],
-button:not([aria-label]):not([aria-labelledby]):not([title]) img:only-child:not([alt])</pre>
+button:empty:not([aria-label]):not([aria-labelledby]):not([title])</pre>
   </div>
 </div>
 <h2>Test</h2>
 <div class="codeExample">
   <div class="exampleOutput">
     <button></button>
-<button>
-  <img src="static/ffoodd.png" width="144" height="144" />
-  <i> </i>
-</button>
 
   </div>
   <div class="codeBlock">
     <div class="highlight">
-      <pre><span class="nt">&lt;button&gt;&lt;/button&gt;</span>
-<span class="nt">&lt;button&gt;</span>
-  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"static/ffoodd.png"</span> <span class="na">width=</span><span class="s">"144"</span> <span class="na">height=</span><span class="s">"144"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;i&gt;</span> <span class="nt">&lt;/i&gt;</span>
-<span class="nt">&lt;/button&gt;</span></pre>
+      <pre><span class="nt">&lt;button&gt;&lt;/button&gt;</span></pre>
     </div>
   </div>
 </div>
@@ -295,32 +280,18 @@ button:not([aria-label]):not([aria-labelledby]):not([title]) img:only-child:not(
   <div class="highlight">
     <pre>button[title=""],
 button[aria-label=""],
-button[aria-labelledby=""],
-button[title=""] img:only-child[alt=""],
-button[title=""] img:only-child:not([alt]),
-button[aria-label=""] img:only-child[alt=""],
-button[aria-label=""] img:only-child:not([alt]),
-button[aria-labelledby=""] img:only-child[alt=""],
-button[aria-labelledby=""] img:only-child:not([alt])</pre>
+button[aria-labelledby=""]</pre>
   </div>
 </div>
 <h2>Test</h2>
 <div class="codeExample">
   <div class="exampleOutput">
-    <button ttle=""></button>
-<button aria-label="">
-  <img src="static/ffoodd.png" width="144" height="144" />
-  <i> </i>
-</button>
+    <button title=""></button>
 
   </div>
   <div class="codeBlock">
     <div class="highlight">
-      <pre><span class="nt">&lt;button</span> <span class="na">ttle=</span><span class="s">""</span><span class="nt">&gt;&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">aria-label=</span><span class="s">""</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"static/ffoodd.png"</span> <span class="na">width=</span><span class="s">"144"</span> <span class="na">height=</span><span class="s">"144"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;i&gt;</span> <span class="nt">&lt;/i&gt;</span>
-<span class="nt">&lt;/button&gt;</span></pre>
+      <pre><span class="nt">&lt;button</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;&lt;/button&gt;</span></pre>
     </div>
   </div>
 </div>
