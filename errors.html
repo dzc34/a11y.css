@@ -245,21 +245,18 @@ Use <code class="styleguide">[disabled]</code> and <code class="styleguide">[rea
 <h2>Selector</h2>
 <div class="codeBlock">
   <div class="highlight">
-    <pre>button[title=""],
-button[aria-label=""],
-button[aria-labelledby=""],
-button:empty:not([aria-label]):not([aria-labelledby]):not([title])</pre>
+    <pre>button:empty:not([aria-label]):not([aria-labelledby]):not([title])</pre>
   </div>
 </div>
 <h2>Test</h2>
 <div class="codeExample">
   <div class="exampleOutput">
-    <button></button>
+    <button type="button"></button>
 
   </div>
   <div class="codeBlock">
     <div class="highlight">
-      <pre><span class="nt">&lt;button&gt;&lt;/button&gt;</span></pre>
+      <pre><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;&lt;/button&gt;</span></pre>
     </div>
   </div>
 </div>
@@ -286,12 +283,12 @@ button[aria-labelledby=""]</pre>
 <h2>Test</h2>
 <div class="codeExample">
   <div class="exampleOutput">
-    <button title=""></button>
+    <button title="" type="button"></button>
 
   </div>
   <div class="codeBlock">
     <div class="highlight">
-      <pre><span class="nt">&lt;button</span> <span class="na">title=</span><span class="s">""</span><span class="nt">&gt;&lt;/button&gt;</span></pre>
+      <pre><span class="nt">&lt;button</span> <span class="na">title=</span><span class="s">""</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;&lt;/button&gt;</span></pre>
     </div>
   </div>
 </div>
