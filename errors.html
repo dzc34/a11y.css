@@ -63,10 +63,6 @@
             </li>
           
             <li>
-              <a href="#empty-image-link">Empty img link</a>
-            </li>
-          
-            <li>
               <a href="#empty-link">Empty link</a>
             </li>
           
@@ -325,44 +321,6 @@ button[aria-labelledby=""] img:only-child:not([alt])</pre>
   <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"static/ffoodd.png"</span> <span class="na">width=</span><span class="s">"144"</span> <span class="na">height=</span><span class="s">"144"</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;i&gt;</span> <span class="nt">&lt;/i&gt;</span>
 <span class="nt">&lt;/button&gt;</span></pre>
-    </div>
-  </div>
-</div>
-
-<h1 id="empty-image-link" class="styleguide">Empty img link</h1>
-
-<h2>Description</h2>
-<p class="styleguide">When an <code class="styleguide">&lt;img&gt;</code> is a link only child, it must have an <code class="styleguide">[alt]</code>.</p>
-<h2>References</h2>
-<ul class="styleguide"><li><a href="http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-6-5">http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-6-5</a></li>
-<li><a href="http://www.w3.org/TR/WCAG20/#text-equiv-all">http://www.w3.org/TR/WCAG20/#text-equiv-all</a></li>
-<li><a href="http://www.w3.org/TR/WCAG20/#navigation-mechanisms-refs">http://www.w3.org/TR/WCAG20/#navigation-mechanisms-refs</a></li>
-<li><a href="http://www.w3.org/TR/WCAG20/#navigation-mechanisms-link">http://www.w3.org/TR/WCAG20/#navigation-mechanisms-link</a></li>
-<li><a href="http://www.w3.org/TR/WCAG-TECHS/G91.html">http://www.w3.org/TR/WCAG-TECHS/G91.html</a></li>
-<li><a href="http://www.w3.org/TR/WCAG-TECHS/H30.html">http://www.w3.org/TR/WCAG-TECHS/H30.html</a></li>
-<li><a href="https://github.com/Heydon/REVENGE.CSS/blob/master/revenge.css#L193">https://github.com/Heydon/REVENGE.CSS/blob/master/revenge.css#L193</a></li>
-</ul>
-<h2>Selector</h2>
-<div class="codeBlock">
-  <div class="highlight">
-    <pre>a:not([aria-label]):not([aria-labelledby]) img:only-child:not([alt])</pre>
-  </div>
-</div>
-<h2>Test</h2>
-<div class="codeExample">
-  <div class="exampleOutput">
-    <a href="/">
-  <img src="static/ffoodd.png" width="144" height="144" />
-  <i> </i>
-</a>
-
-  </div>
-  <div class="codeBlock">
-    <div class="highlight">
-      <pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"static/ffoodd.png"</span> <span class="na">width=</span><span class="s">"144"</span> <span class="na">height=</span><span class="s">"144"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;i&gt;</span> <span class="nt">&lt;/i&gt;</span>
-<span class="nt">&lt;/a&gt;</span></pre>
     </div>
   </div>
 </div>
