@@ -370,7 +370,7 @@ button[aria-labelledby=""] img:only-child:not([alt])</pre>
 <h1 id="empty-link" class="styleguide">Empty link</h1>
 
 <h2>Description</h2>
-<p class="styleguide">An empty link should have a label, within <code class="styleguide">[aria-label]</code> or targeted by <code class="styleguide">[aria-labelledby]</code>.
+<p class="styleguide">An empty link should have a label, within <code class="styleguide">[title]</code>, <code class="styleguide">[aria-label]</code> or targeted by <code class="styleguide">[aria-labelledby]</code>.
 By the way, why would you use an empty link?</p>
 <h2>References</h2>
 <ul class="styleguide"><li><a href="http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-6-5">http://www.accessiweb.org/index.php/accessiweb-html5aria-liste-deployee.html#crit-6-5</a></li>
@@ -384,7 +384,10 @@ By the way, why would you use an empty link?</p>
 <h2>Selector</h2>
 <div class="codeBlock">
   <div class="highlight">
-    <pre>a:empty:not([aria-label]):not([aria-labelledby])</pre>
+    <pre>a:empty[title=""],
+a:empty[aria-label=""],
+a:empty[aria-labelledby=""],
+a:empty:not([title]):not([aria-label]):not([aria-labelledby])</pre>
   </div>
 </div>
 <h2>Test</h2>
