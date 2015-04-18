@@ -119,10 +119,6 @@
             </li>
           
             <li>
-              <a href="#not-col">Unothaurized colgroup child</a>
-            </li>
-          
-            <li>
               <a href="#null-undefined">Bad computed value</a>
             </li>
           
@@ -755,14 +751,15 @@ strong div</pre>
 <h2>Selector</h2>
 <div class="codeBlock">
   <div class="highlight">
-    <pre>table:not([role="presentation"]) &gt; tbody:first-child</pre>
+    <pre>table:not([role="presentation"]) &gt; caption + tbody,
+table:not([role="presentation"]) &gt; tbody:first-child</pre>
   </div>
 </div>
 <h2>Test</h2>
 <div class="codeExample">
   <div class="exampleOutput">
     <table>
-  <caption>issing thead</caption>
+  <caption>Missing thead</caption>
   <tbody>
     <tr>
       <td>I'm a table without thead.</td>
@@ -779,7 +776,7 @@ strong div</pre>
   <div class="codeBlock">
     <div class="highlight">
       <pre><span class="nt">&lt;table&gt;</span>
-  <span class="nt">&lt;caption&gt;</span>issing thead<span class="nt">&lt;/caption&gt;</span>
+  <span class="nt">&lt;caption&gt;</span>Missing thead<span class="nt">&lt;/caption&gt;</span>
   <span class="nt">&lt;tbody&gt;</span>
     <span class="nt">&lt;tr&gt;</span>
       <span class="nt">&lt;td&gt;</span>I'm a table without thead.<span class="nt">&lt;/td&gt;</span>
@@ -835,61 +832,6 @@ strong div</pre>
   <span class="nt">&lt;rect</span> <span class="na">x=</span><span class="s">"400"</span> <span class="na">y=</span><span class="s">"100"</span> <span class="na">width=</span><span class="s">"400"</span> <span class="na">height=</span><span class="s">"200"</span>
         <span class="na">fill=</span><span class="s">"forestgreen"</span> <span class="na">stroke=</span><span class="s">"darkgreen"</span> <span class="na">stroke-width=</span><span class="s">"10"</span>  <span class="nt">/&gt;</span>
 <span class="nt">&lt;/svg&gt;&lt;i&gt;</span> <span class="nt">&lt;/i&gt;</span></pre>
-    </div>
-  </div>
-</div>
-
-<h1 id="not-col" class="styleguide">Unothaurized colgroup child</h1>
-
-<h2>Description</h2>
-<p class="styleguide">Anything but <code class="styleguide">&lt;col&gt;</code> is forbidden inside a <code class="styleguide">&lt;colgroup&gt;</code>.</p>
-<h2>References</h2>
-<ul class="styleguide"><li><a href="https://github.com/yahoo/debugCSS/blob/master/debugCSS.css#L342">https://github.com/yahoo/debugCSS/blob/master/debugCSS.css#L342</a></li>
-<li><a href="http://www.w3.org/TR/html5/tabular-data.html#the-colgroup-element">http://www.w3.org/TR/html5/tabular-data.html#the-colgroup-element</a></li>
-</ul>
-<h2>Selector</h2>
-<div class="codeBlock">
-  <div class="highlight">
-    <pre>colgroup:not([span]) *:not(col)</pre>
-  </div>
-</div>
-<h2>Test</h2>
-<div class="codeExample">
-  <div class="exampleOutput">
-    <table>
-  <caption>Invalid colgroup child</caption>
-  <colgroup>
-    <td>Invalid colgroup child.</td>
-    <td>Invalid colgroup child.</td>
-  </colgroup>
-  <tr>
-    <th>Invalid colgroup child.</th>
-    <th>Invalid colgroup child.</th>
-  </tr>
-  <tr>
-    <td>Invalid colgroup child.</td>
-    <td>Invalid colgroup child.</td>
-  </tr>
-</table>
-
-  </div>
-  <div class="codeBlock">
-    <div class="highlight">
-      <pre><span class="nt">&lt;table&gt;</span>
-  <span class="nt">&lt;caption&gt;</span>Invalid colgroup child<span class="nt">&lt;/caption&gt;</span>
-  <span class="nt">&lt;colgroup&gt;</span>
-    <span class="nt">&lt;td&gt;</span>Invalid colgroup child.<span class="nt">&lt;/td&gt;</span>
-    <span class="nt">&lt;td&gt;</span>Invalid colgroup child.<span class="nt">&lt;/td&gt;</span>
-  <span class="nt">&lt;/colgroup&gt;</span>
-  <span class="nt">&lt;tr&gt;</span>
-    <span class="nt">&lt;th&gt;</span>Invalid colgroup child.<span class="nt">&lt;/th&gt;</span>
-    <span class="nt">&lt;th&gt;</span>Invalid colgroup child.<span class="nt">&lt;/th&gt;</span>
-  <span class="nt">&lt;/tr&gt;</span>
-  <span class="nt">&lt;tr&gt;</span>
-    <span class="nt">&lt;td&gt;</span>Invalid colgroup child.<span class="nt">&lt;/td&gt;</span>
-    <span class="nt">&lt;td&gt;</span>Invalid colgroup child.<span class="nt">&lt;/td&gt;</span>
-  <span class="nt">&lt;/tr&gt;</span>
-<span class="nt">&lt;/table&gt;</span></pre>
     </div>
   </div>
 </div>
@@ -966,11 +908,18 @@ article &gt; article:first-child</pre>
 <p class="styleguide">Believe me, this still have to be tested.</p>
 <h2>References</h2>
 <ul class="styleguide"><li><a href="https://github.com/yahoo/debugCSS/blob/master/debugCSS.css#L381">https://github.com/yahoo/debugCSS/blob/master/debugCSS.css#L381</a></li>
+<li><a href="http://www.la-grange.net/2015/03/11/visible">http://www.la-grange.net/2015/03/11/visible</a></li>
 </ul>
 <h2>Selector</h2>
 <div class="codeBlock">
   <div class="highlight">
-    <pre>img[src*="spacer.gif"]:not([role="presentation"])</pre>
+    <pre>img[src*="1px.gif"]:not([role="presentation"]),
+img[src*="1x1.gif"]:not([role="presentation"]),
+img[src*="clear.gif"]:not([role="presentation"]),
+img[src*="spacer.gif"]:not([role="presentation"]),
+img[src*="dotclear.gif"]:not([role="presentation"]),
+img[src*="transparent.gif"]:not([role="presentation"]),
+img[src*="pixel-1x1-clear.gif"]:not([role="presentation"])</pre>
   </div>
 </div>
 <h2>Test</h2>
