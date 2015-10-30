@@ -87,7 +87,7 @@
             </li>
           
             <li>
-              <a href="#placeholder">Placeholder can't replace a label</a>
+              <a href="#placeholder">Placeholder can&#39;t replace a label</a>
             </li>
           
             <li>
@@ -104,6 +104,10 @@
           
             <li>
               <a href="#target-blank">A link opening new tab or window</a>
+            </li>
+          
+            <li>
+              <a href="#tel">A phone link should call a real number</a>
             </li>
           
             <li>
@@ -356,7 +360,8 @@
 <h2>Selector</h2>
 <div class="codeBlock">
   <div class="highlight">
-    <pre></pre>
+    <pre>[hidden]:not(:empty),
+[aria-hidden="true"]:not(:empty)</pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -432,7 +437,8 @@ Otherwise you may annoy your users.</p>
 <h2>Selector</h2>
 <div class="codeBlock">
   <div class="highlight">
-    <pre></pre>
+    <pre>[id*="search"]:not([role="search"]),
+[class*="search"]:not([role="search"])</pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -454,14 +460,14 @@ Otherwise you may annoy your users.</p>
   </div>
 </div>
 
-<h1 id="placeholder" class="styleguide">Placeholder can't replace a label</h1>
+<h1 id="placeholder" class="styleguide">Placeholder can&#39;t replace a label</h1>
 
 <h2>Description</h2>
 <p class="styleguide">A <code class="styleguide">[placeholder]</code> is not a label, isn&#39;t it?</p>
 <h2>Selector</h2>
 <div class="codeBlock">
   <div class="highlight">
-    <pre></pre>
+    <pre>[placeholder]:not([title]):not([aria-label]):not([aria-labelledby])</pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -610,6 +616,30 @@ You could use a <code class="styleguide">[title]</code>, for example.</p>
   <div class="codeBlock">
     <div class="highlight">
       <pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span> <span class="na">target=</span><span class="s">"_blank"</span><span class="nt">&gt;</span>New tab<span class="nt">&lt;/a&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="tel" class="styleguide">A phone link should call a real number</h1>
+
+<h2>Description</h2>
+<p class="styleguide">A <code class="styleguide">&lt;href=&quot;tel:&quot;&gt;</code> should contain a valid phone number.
+Otherwise you may make your users to call anubody.</p>
+<h2>Selector</h2>
+<div class="codeBlock">
+  <div class="highlight">
+    <pre>[href^="tel"]</pre>
+  </div>
+</div>
+<h2>Test</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <a href="tel:012345678">Who will I call?</a>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"tel:012345678"</span><span class="nt">&gt;</span>Who will I call?<span class="nt">&lt;/a&gt;</span></pre>
     </div>
   </div>
 </div>
