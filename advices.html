@@ -87,7 +87,7 @@
             </li>
           
             <li>
-              <a href="#placeholder">Placeholder can't replace a label</a>
+              <a href="#placeholder">Placeholder can&#39;t replace a label</a>
             </li>
           
             <li>
@@ -360,7 +360,8 @@
 <h2>Selector</h2>
 <div class="codeBlock">
   <div class="highlight">
-    <pre></pre>
+    <pre>[hidden]:not(:empty),
+[aria-hidden="true"]:not(:empty)</pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -436,7 +437,8 @@ Otherwise you may annoy your users.</p>
 <h2>Selector</h2>
 <div class="codeBlock">
   <div class="highlight">
-    <pre></pre>
+    <pre>[id*="search"]:not([role="search"]),
+[class*="search"]:not([role="search"])</pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -458,14 +460,14 @@ Otherwise you may annoy your users.</p>
   </div>
 </div>
 
-<h1 id="placeholder" class="styleguide">Placeholder can't replace a label</h1>
+<h1 id="placeholder" class="styleguide">Placeholder can&#39;t replace a label</h1>
 
 <h2>Description</h2>
 <p class="styleguide">A <code class="styleguide">[placeholder]</code> is not a label, isn&#39;t it?</p>
 <h2>Selector</h2>
 <div class="codeBlock">
   <div class="highlight">
-    <pre></pre>
+    <pre>[placeholder]:not([title]):not([aria-label]):not([aria-labelledby])</pre>
   </div>
 </div>
 <h2>Test</h2>

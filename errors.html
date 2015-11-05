@@ -240,11 +240,18 @@ Use <code class="styleguide">[disabled]</code> and <code class="styleguide">[rea
 <li><a href="http://www.w3.org/TR/WCAG20/#ensure-compat-rsv">http://www.w3.org/TR/WCAG20/#ensure-compat-rsv</a></li>
 <li><a href="http://www.w3.org/TR/WCAG-TECHS/H91.html">http://www.w3.org/TR/WCAG-TECHS/H91.html</a></li>
 <li><a href="https://github.com/Heydon/REVENGE.CSS/blob/master/revenge.css#L193">https://github.com/Heydon/REVENGE.CSS/blob/master/revenge.css#L193</a></li>
+<li><a href="https://drafts.csswg.org/selectors-4/#the-blank-pseudo">https://drafts.csswg.org/selectors-4/#the-blank-pseudo</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-only-whitespace">https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-only-whitespace</a></li>
+<li><a href="https://css-tricks.com/almanac/selectors/b/blank/">https://css-tricks.com/almanac/selectors/b/blank/</a></li>
 </ul>
 <h2>Selector</h2>
 <div class="codeBlock">
   <div class="highlight">
-    <pre>button:empty:not([aria-label]):not([aria-labelledby]):not([title])</pre>
+    <pre>button:empty:not([aria-label]):not([aria-labelledby]):not([title])
+
+button:blank:not([aria-label]):not([aria-labelledby]):not([title])
+
+button:-moz-only-whitespace:not([aria-label]):not([aria-labelledby]):not([title])</pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -252,10 +259,14 @@ Use <code class="styleguide">[disabled]</code> and <code class="styleguide">[rea
   <div class="exampleOutput">
     <button type="button"></button>
 
+<button type="button"> </button>
+
   </div>
   <div class="codeBlock">
     <div class="highlight">
-      <pre><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;&lt;/button&gt;</span></pre>
+      <pre><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;&lt;/button&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span> <span class="nt">&lt;/button&gt;</span></pre>
     </div>
   </div>
 </div>
@@ -305,6 +316,9 @@ By the way, why would you use an empty link?</p>
 <li><a href="http://www.w3.org/TR/WCAG-TECHS/H30.html">http://www.w3.org/TR/WCAG-TECHS/H30.html</a></li>
 <li><a href="http://www.w3.org/TR/WCAG-TECHS/G91.html">http://www.w3.org/TR/WCAG-TECHS/G91.html</a></li>
 <li><a href="https://github.com/Heydon/REVENGE.CSS/blob/master/revenge.css#L193">https://github.com/Heydon/REVENGE.CSS/blob/master/revenge.css#L193</a></li>
+<li><a href="https://drafts.csswg.org/selectors-4/#the-blank-pseudo">https://drafts.csswg.org/selectors-4/#the-blank-pseudo</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-only-whitespace">https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-only-whitespace</a></li>
+<li><a href="https://css-tricks.com/almanac/selectors/b/blank/">https://css-tricks.com/almanac/selectors/b/blank/</a></li>
 </ul>
 <h2>Selector</h2>
 <div class="codeBlock">
@@ -312,7 +326,17 @@ By the way, why would you use an empty link?</p>
     <pre>a:empty[title=""],
 a:empty[aria-label=""],
 a:empty[aria-labelledby=""],
-a:empty:not([title]):not([aria-label]):not([aria-labelledby])</pre>
+a:empty:not([title]):not([aria-label]):not([aria-labelledby])
+
+a:blank[title=""],
+a:blank[aria-label=""],
+a:blank[aria-labelledby=""],
+a:blank:not([title]):not([aria-label]):not([aria-labelledby])
+
+a:-moz-only-whitespace[title=""],
+a:-moz-only-whitespace[aria-label=""],
+a:-moz-only-whitespace[aria-labelledby=""],
+a:-moz-only-whitespace:not([title]):not([aria-label]):not([aria-labelledby])</pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -320,10 +344,14 @@ a:empty:not([title]):not([aria-label]):not([aria-labelledby])</pre>
   <div class="exampleOutput">
     <a href="/" class="inbl w-20" id="empty-link_code"></a>
 
+<a href="/" class="inbl w-20" id="empty-link_code-moz"> </a>
+
   </div>
   <div class="codeBlock">
     <div class="highlight">
-      <pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span> <span class="na">class=</span><span class="s">"inbl w-20"</span> <span class="na">id=</span><span class="s">"empty-link_code"</span><span class="nt">&gt;&lt;/a&gt;</span></pre>
+      <pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span> <span class="na">class=</span><span class="s">"inbl w-20"</span> <span class="na">id=</span><span class="s">"empty-link_code"</span><span class="nt">&gt;&lt;/a&gt;</span>
+
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span> <span class="na">class=</span><span class="s">"inbl w-20"</span> <span class="na">id=</span><span class="s">"empty-link_code-moz"</span><span class="nt">&gt;</span> <span class="nt">&lt;/a&gt;</span></pre>
     </div>
   </div>
 </div>
@@ -941,7 +969,7 @@ And no, JS shouldn&#39;t manipulate styles: it&#39;s better to play with classes
 <h2>Selector</h2>
 <div class="codeBlock">
   <div class="highlight">
-    <pre></pre>
+    <pre>[tabindex]:not([tabindex="0"]):not([tabindex="-1"])</pre>
   </div>
 </div>
 <h2>Test</h2>

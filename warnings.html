@@ -67,7 +67,7 @@
             </li>
           
             <li>
-              <a href="#empty-nodes">Most of DOM nodes shouldn't be :empty</a>
+              <a href="#empty-nodes">Most of DOM nodes shouldn&#39;t be :empty</a>
             </li>
           
             <li>
@@ -75,7 +75,7 @@
             </li>
           
             <li>
-              <a href="#fieldset">legend must be a fieldset's:first-child</a>
+              <a href="#fieldset">legend must be a fieldset&#39;s:first-child</a>
             </li>
           
             <li>
@@ -190,7 +190,7 @@
 <h2>Selector</h2>
 <div class="codeBlock">
   <div class="highlight">
-    <pre></pre>
+    <pre>[class*="toggle"]:not([aria-expanded]):not([aria-haspopup])</pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -331,21 +331,27 @@ Should probably be a <code class="styleguide">&lt;button&gt;</code> or at least 
   </div>
 </div>
 
-<h1 id="empty-nodes" class="styleguide">Most of DOM nodes shouldn't be :empty</h1>
+<h1 id="empty-nodes" class="styleguide">Most of DOM nodes shouldn&#39;t be :empty</h1>
 
 <h2>Description</h2>
 <p class="styleguide">Obviously void elements are empty, as well as <code class="styleguide">&lt;iframe&gt;</code> and <code class="styleguide">&lt;textarea&gt;</code> could be <code class="styleguide">:empty</code>.
-Any other <code class="styleguide">:empty</code> tag that is not hidden is probably useless, and should be deleted.</p><p class="styleguide">One day we could use the <code class="styleguide">:blank</code> pseudo-class, but at this time its support is very poor and causes browser to not understand a11y.css&#39;selectors.</p>
+Any other <code class="styleguide">:empty</code> tag that is not hidden is probably useless, and should be deleted.</p><p class="styleguide">We also use the <code class="styleguide">:blank</code> pseudo-class, but at this time its support is very poor.
+We also use the <code class="styleguide">:-moz-only-whitespace</code> pseudo-class, which is an alias of <code class="styleguide">:blank</code>.</p>
 <h2>References</h2>
 <ul class="styleguide"><li><a href="https://github.com/Heydon/REVENGE.CSS/blob/master/revenge.css#L243">https://github.com/Heydon/REVENGE.CSS/blob/master/revenge.css#L243</a></li>
 <li><a href="http://www.w3.org/TR/html-markup/syntax.html#void-element">http://www.w3.org/TR/html-markup/syntax.html#void-element</a></li>
-<li><a href="http://dev.w3.org/csswg/selectors-4/#the-blank-pseudo">http://dev.w3.org/csswg/selectors-4/#the-blank-pseudo</a></li>
+<li><a href="https://drafts.csswg.org/selectors-4/#the-blank-pseudo">https://drafts.csswg.org/selectors-4/#the-blank-pseudo</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-only-whitespace">https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-only-whitespace</a></li>
 <li><a href="https://css-tricks.com/almanac/selectors/b/blank/">https://css-tricks.com/almanac/selectors/b/blank/</a></li>
 </ul>
 <h2>Selector</h2>
 <div class="codeBlock">
   <div class="highlight">
-    <pre>*:empty:not([hidden]):not([aria-hidden]):not(iframe):not(textarea):not(area):not(base):not(br):not(col):not(command):not(embed):not(hr):not(img):not(input):not(keygen):not(link):not(meta):not(param):not(source):not(track):not(wbr)</pre>
+    <pre>*:empty:not([hidden]):not([aria-hidden]):not(iframe):not(textarea):not(area):not(base):not(br):not(col):not(command):not(embed):not(hr):not(img):not(input):not(keygen):not(link):not(meta):not(param):not(source):not(track):not(wbr)
+
+*:blank:not([hidden]):not([aria-hidden]):not(iframe):not(textarea):not(area):not(base):not(br):not(col):not(command):not(embed):not(hr):not(img):not(input):not(keygen):not(link):not(meta):not(param):not(source):not(track):not(wbr)
+
+*:-moz-only-whitespace:not([hidden]):not([aria-hidden]):not(iframe):not(textarea):not(area):not(base):not(br):not(col):not(command):not(embed):not(hr):not(img):not(input):not(keygen):not(link):not(meta):not(param):not(source):not(track):not(wbr)</pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -353,10 +359,14 @@ Any other <code class="styleguide">:empty</code> tag that is not hidden is proba
   <div class="exampleOutput">
     <p id="empty-node_code"></p>
 
+<p id="-moz-only-whitespace"> </p>
+
   </div>
   <div class="codeBlock">
     <div class="highlight">
-      <pre><span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"empty-node_code"</span><span class="nt">&gt;&lt;/p&gt;</span></pre>
+      <pre><span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"empty-node_code"</span><span class="nt">&gt;&lt;/p&gt;</span>
+
+<span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"-moz-only-whitespace"</span><span class="nt">&gt;</span> <span class="nt">&lt;/p&gt;</span></pre>
     </div>
   </div>
 </div>
@@ -394,7 +404,7 @@ abbr[title=""]</pre>
   </div>
 </div>
 
-<h1 id="fieldset" class="styleguide">legend must be a fieldset's:first-child</h1>
+<h1 id="fieldset" class="styleguide">legend must be a fieldset&#39;s:first-child</h1>
 
 <h2>Description</h2>
 <p class="styleguide"><code class="styleguide">&lt;legend&gt;</code> must be a <code class="styleguide">&lt;fieldset&gt;</code>&#39;s<code class="styleguide">:first-child</code>.
