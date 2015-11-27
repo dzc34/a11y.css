@@ -337,7 +337,7 @@ Should probably be a <code class="styleguide">&lt;button&gt;</code> or at least 
 
 <h2>Description</h2>
 <p class="styleguide">Obviously void elements are empty, as well as <code class="styleguide">&lt;iframe&gt;</code> and <code class="styleguide">&lt;textarea&gt;</code> could be <code class="styleguide">:empty</code>.
-Any other <code class="styleguide">:empty</code> tag that is not hidden is probably useless, and should be deleted.</p><p class="styleguide">We also use the <code class="styleguide">:blank</code> pseudo-class, but at this time its support is very poor.
+Any other <code class="styleguide">:empty</code> tag that is not hidden is probably useless, and should be deleted.</p><p class="styleguide">Note: this test only targets tags in <code class="styleguide">&lt;body&gt;</code>, since most of head&#39;s tags should be empty.</p><p class="styleguide">We also use the <code class="styleguide">:blank</code> pseudo-class, but at this time its support is very poor.
 We also use the <code class="styleguide">:-moz-only-whitespace</code> pseudo-class, which is an alias of <code class="styleguide">:blank</code>.</p>
 <h2>References</h2>
 <ul class="styleguide"><li><a href="https://github.com/Heydon/REVENGE.CSS/blob/master/revenge.css#L243">https://github.com/Heydon/REVENGE.CSS/blob/master/revenge.css#L243</a></li>
@@ -349,9 +349,9 @@ We also use the <code class="styleguide">:-moz-only-whitespace</code> pseudo-cla
 <h2>Selector</h2>
 <div class="codeBlock">
   <div class="highlight">
-    <pre>*:empty:not([hidden]):not([aria-hidden]):not(iframe):not(textarea):not(area):not(base):not(br):not(col):not(command):not(embed):not(hr):not(img):not(input):not(keygen):not(link):not(meta):not(param):not(source):not(track):not(wbr)
-*:blank:not([hidden]):not([aria-hidden]):not(iframe):not(textarea):not(area):not(base):not(br):not(col):not(command):not(embed):not(hr):not(img):not(input):not(keygen):not(link):not(meta):not(param):not(source):not(track):not(wbr)
-*:-moz-only-whitespace:not([hidden]):not([aria-hidden]):not(iframe):not(textarea):not(area):not(base):not(br):not(col):not(command):not(embed):not(hr):not(img):not(input):not(keygen):not(link):not(meta):not(param):not(source):not(track):not(wbr)</pre>
+    <pre>body *:empty:not([hidden]):not([aria-hidden]):not(iframe):not(textarea):not(area):not(base):not(br):not(col):not(command):not(embed):not(hr):not(img):not(input):not(keygen):not(link):not(meta):not(param):not(source):not(track):not(wbr):not(title)
+body *:blank:not([hidden]):not([aria-hidden]):not(iframe):not(textarea):not(area):not(base):not(br):not(col):not(command):not(embed):not(hr):not(img):not(input):not(keygen):not(link):not(meta):not(param):not(source):not(track):not(wbr):not(title)
+body *:-moz-only-whitespace:not([hidden]):not([aria-hidden]):not(iframe):not(textarea):not(area):not(base):not(br):not(col):not(command):not(embed):not(hr):not(img):not(input):not(keygen):not(link):not(meta):not(param):not(source):not(track):not(wbr):not(title)</pre>
   </div>
 </div>
 <h2>Test</h2>

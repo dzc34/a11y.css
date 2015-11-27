@@ -99,6 +99,10 @@
             </li>
           
             <li>
+              <a href="#no-page-title">Empty &lt;title&gt;</a>
+            </li>
+          
+            <li>
               <a href="#no-src">Missing source for img</a>
             </li>
           
@@ -675,6 +679,46 @@ html[lang=""]</pre>
   <div class="codeBlock">
     <div class="highlight">
       <pre><span class="nt">&lt;iframe</span> <span class="na">title=</span><span class="s">"No language defined a11y.css test-case"</span> <span class="na">src=</span><span class="s">"static/no-lang.html"</span> <span class="na">width=</span><span class="s">"650"</span> <span class="na">height=</span><span class="s">"200"</span> <span class="na">class=</span><span class="s">"b-reset"</span><span class="nt">&gt;&lt;/iframe&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="no-page-title" class="styleguide">Empty &lt;title&gt;</h1>
+
+<h2>Description</h2>
+<p class="styleguide">The <code class="styleguide">title&gt;</code> tag is the first thing read aloud by screen readers — to announce the page&hellip; title — and also the first thing displayed on search engines&#39; results pages.</p><p class="styleguide">We also use the <code class="styleguide">:blank</code> pseudo-class for the single space case, but at this time its support is very poor.
+We also use the <code class="styleguide">:-moz-only-whitespace</code> pseudo-class, which is an alias of <code class="styleguide">:blank</code>.</p>
+<h2>References</h2>
+<ul class="styleguide"><li><a href="http://references.modernisation.gouv.fr/referentiel-technique-0#title-critre-85-a-chaque-page-web-a-t-elle-un-titre-de-page-">http://references.modernisation.gouv.fr/referentiel-technique-0#title-critre-85-a-chaque-page-web-a-t-elle-un-titre-de-page-</a></li>
+<li><a href="http://references.modernisation.gouv.fr/referentiel-technique-0#titre-de-page">http://references.modernisation.gouv.fr/referentiel-technique-0#titre-de-page</a></li>
+<li><a href="http://www.w3.org/TR/html5/document-metadata.html#the-title-element">http://www.w3.org/TR/html5/document-metadata.html#the-title-element</a></li>
+<li><a href="http://www.w3.org/TR/WCAG20/#navigation-mechanisms-title">http://www.w3.org/TR/WCAG20/#navigation-mechanisms-title</a></li>
+<li><a href="http://www.w3.org/WAI/WCAG20/quickref/#qr-navigation-mechanisms-title">http://www.w3.org/WAI/WCAG20/quickref/#qr-navigation-mechanisms-title</a></li>
+<li><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-title.html">http://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-title.html</a></li>
+<li><a href="http://www.w3.org/TR/WCAG-TECHS/G88.html">http://www.w3.org/TR/WCAG-TECHS/G88.html</a></li>
+<li><a href="http://www.w3.org/TR/WCAG-TECHS/G127.html">http://www.w3.org/TR/WCAG-TECHS/G127.html</a></li>
+<li><a href="http://www.w3.org/TR/WCAG-TECHS/H25.html">http://www.w3.org/TR/WCAG-TECHS/H25.html</a></li>
+<li><a href="https://drafts.csswg.org/selectors-4/#the-blank-pseudo">https://drafts.csswg.org/selectors-4/#the-blank-pseudo</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-only-whitespace">https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-only-whitespace</a></li>
+<li><a href="https://css-tricks.com/almanac/selectors/b/blank/">https://css-tricks.com/almanac/selectors/b/blank/</a></li>
+</ul>
+<h2>Selector</h2>
+<div class="codeBlock">
+  <div class="highlight">
+    <pre>title:empty
+title:blank
+title:-moz-only-whitespace</pre>
+  </div>
+</div>
+<h2>Test</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <title></title>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;title&gt;&lt;/title&gt;</span></pre>
     </div>
   </div>
 </div>
