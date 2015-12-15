@@ -169,12 +169,12 @@
 <li><a href="http://www.w3.org/TR/WCAG20/#navigation-mechanisms-skip">http://www.w3.org/TR/WCAG20/#navigation-mechanisms-skip</a></li>
 </ul>
 <h2>Selector</h2>
-<div class="codeBlock">
+<div class="codeBlock cssExample">
   <div class="highlight">
-    <pre>[role="main"] ~ [role="main"],
-[role="search"] ~ [role="search"],
-[role="banner"] ~ [role="banner"],
-[role="contentinfo"] ~ [role="contentinfo"]</pre>
+    <pre><span class="o">[</span><span class="nt">role</span><span class="o">=</span><span class="err">"</span><span class="nt">main</span><span class="err">"</span><span class="o">]</span> <span class="o">~</span> <span class="o">[</span><span class="nt">role</span><span class="o">=</span><span class="err">"</span><span class="nt">main</span><span class="err">"</span><span class="o">],</span>
+<span class="o">[</span><span class="nt">role</span><span class="o">=</span><span class="err">"</span><span class="nt">search</span><span class="err">"</span><span class="o">]</span> <span class="o">~</span> <span class="o">[</span><span class="nt">role</span><span class="o">=</span><span class="err">"</span><span class="nt">search</span><span class="err">"</span><span class="o">],</span>
+<span class="o">[</span><span class="nt">role</span><span class="o">=</span><span class="err">"</span><span class="nt">banner</span><span class="err">"</span><span class="o">]</span> <span class="o">~</span> <span class="o">[</span><span class="nt">role</span><span class="o">=</span><span class="err">"</span><span class="nt">banner</span><span class="err">"</span><span class="o">],</span>
+<span class="o">[</span><span class="nt">role</span><span class="o">=</span><span class="err">"</span><span class="nt">contentinfo</span><span class="err">"</span><span class="o">]</span> <span class="o">~</span> <span class="o">[</span><span class="nt">role</span><span class="o">=</span><span class="err">"</span><span class="nt">contentinfo</span><span class="err">"</span><span class="o">]</span></pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -197,9 +197,9 @@
 <h2>Description</h2>
 <p class="styleguide"><code class="styleguide">[class]</code> shouldn&#39;t be present if empty. Something to improve, right?</p>
 <h2>Selector</h2>
-<div class="codeBlock">
+<div class="codeBlock cssExample">
   <div class="highlight">
-    <pre>[class=""]</pre>
+    <pre><span class="o">[</span><span class="nt">class</span><span class="o">=</span><span class="err">""</span><span class="o">]</span></pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -220,9 +220,9 @@
 <h2>Description</h2>
 <p class="styleguide"><code class="styleguide">[id]</code> shouldn&#39;t be present if empty. You&#39;ll thank me later.</p>
 <h2>Selector</h2>
-<div class="codeBlock">
+<div class="codeBlock cssExample">
   <div class="highlight">
-    <pre>[id=""]</pre>
+    <pre><span class="o">[</span><span class="nt">id</span><span class="o">=</span><span class="err">""</span><span class="o">]</span></pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -246,9 +246,9 @@
 <ul class="styleguide"><li><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-figure-element">http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-figure-element</a></li>
 </ul>
 <h2>Selector</h2>
-<div class="codeBlock">
+<div class="codeBlock cssExample">
   <div class="highlight">
-    <pre>figcaption:not(:only-of-type)</pre>
+    <pre><span class="nt">figcaption</span><span class="nd">:not</span><span class="o">(</span><span class="nd">:only-of-type</span><span class="o">)</span></pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -280,9 +280,9 @@
 <ul class="styleguide"><li><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-figure-element">http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-figure-element</a></li>
 </ul>
 <h2>Selector</h2>
-<div class="codeBlock">
+<div class="codeBlock cssExample">
   <div class="highlight">
-    <pre>figcaption:not(:first-child):not(:last-child)</pre>
+    <pre><span class="nt">figcaption</span><span class="nd">:not</span><span class="o">(</span><span class="nd">:first-child</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nd">:last-child</span><span class="o">)</span></pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -317,23 +317,23 @@
 <li><a href="http://www.w3.org/TR/WCAG-TECHS/H33.html">http://www.w3.org/TR/WCAG-TECHS/H33.html</a></li>
 </ul>
 <h2>Selector</h2>
-<div class="codeBlock">
+<div class="codeBlock cssExample">
   <div class="highlight">
-    <pre>[download],
-[href$=".pdf"],
-[href$=".doc"],
-[href$=".png"],
-[href$=".jpg"],
-[href$=".gif"],
-[href$=".mp3"],
-[href$=".mp4"],
-[href$=".mov"],
-[href$=".ogg"],
-[href$=".xls"],
-[href$=".txt"],
-[href$=".zip"],
-[href$=".rar"],
-[href$=".docx"]</pre>
+    <pre><span class="o">[</span><span class="nt">download</span><span class="o">],</span>
+<span class="o">[</span><span class="nt">href</span><span class="err">$</span><span class="o">=</span><span class="err">"</span><span class="nc">.pdf</span><span class="err">"</span><span class="o">],</span>
+<span class="o">[</span><span class="nt">href</span><span class="err">$</span><span class="o">=</span><span class="err">"</span><span class="nc">.doc</span><span class="err">"</span><span class="o">],</span>
+<span class="o">[</span><span class="nt">href</span><span class="err">$</span><span class="o">=</span><span class="err">"</span><span class="nc">.png</span><span class="err">"</span><span class="o">],</span>
+<span class="o">[</span><span class="nt">href</span><span class="err">$</span><span class="o">=</span><span class="err">"</span><span class="nc">.jpg</span><span class="err">"</span><span class="o">],</span>
+<span class="o">[</span><span class="nt">href</span><span class="err">$</span><span class="o">=</span><span class="err">"</span><span class="nc">.gif</span><span class="err">"</span><span class="o">],</span>
+<span class="o">[</span><span class="nt">href</span><span class="err">$</span><span class="o">=</span><span class="err">"</span><span class="nc">.mp3</span><span class="err">"</span><span class="o">],</span>
+<span class="o">[</span><span class="nt">href</span><span class="err">$</span><span class="o">=</span><span class="err">"</span><span class="nc">.mp4</span><span class="err">"</span><span class="o">],</span>
+<span class="o">[</span><span class="nt">href</span><span class="err">$</span><span class="o">=</span><span class="err">"</span><span class="nc">.mov</span><span class="err">"</span><span class="o">],</span>
+<span class="o">[</span><span class="nt">href</span><span class="err">$</span><span class="o">=</span><span class="err">"</span><span class="nc">.ogg</span><span class="err">"</span><span class="o">],</span>
+<span class="o">[</span><span class="nt">href</span><span class="err">$</span><span class="o">=</span><span class="err">"</span><span class="nc">.xls</span><span class="err">"</span><span class="o">],</span>
+<span class="o">[</span><span class="nt">href</span><span class="err">$</span><span class="o">=</span><span class="err">"</span><span class="nc">.txt</span><span class="err">"</span><span class="o">],</span>
+<span class="o">[</span><span class="nt">href</span><span class="err">$</span><span class="o">=</span><span class="err">"</span><span class="nc">.zip</span><span class="err">"</span><span class="o">],</span>
+<span class="o">[</span><span class="nt">href</span><span class="err">$</span><span class="o">=</span><span class="err">"</span><span class="nc">.rar</span><span class="err">"</span><span class="o">],</span>
+<span class="o">[</span><span class="nt">href</span><span class="err">$</span><span class="o">=</span><span class="err">"</span><span class="nc">.docx</span><span class="err">"</span><span class="o">]</span></pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -358,10 +358,10 @@
 <li><a href="http://www.w3.org/TR/WCAG20/#ensure-compat-rsv">http://www.w3.org/TR/WCAG20/#ensure-compat-rsv</a></li>
 </ul>
 <h2>Selector</h2>
-<div class="codeBlock">
+<div class="codeBlock cssExample">
   <div class="highlight">
-    <pre>[hidden]:not(:empty),
-[aria-hidden="true"]:not(:empty)</pre>
+    <pre><span class="o">[</span><span class="nt">hidden</span><span class="o">]</span><span class="nd">:not</span><span class="o">(</span><span class="nd">:empty</span><span class="o">),</span>
+<span class="o">[</span><span class="nt">aria-hidden</span><span class="o">=</span><span class="err">"</span><span class="nt">true</span><span class="err">"</span><span class="o">]</span><span class="nd">:not</span><span class="o">(</span><span class="nd">:empty</span><span class="o">)</span></pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -383,9 +383,9 @@
 <p class="styleguide">A <code class="styleguide">&lt;href=&quot;mailto:&quot;&gt;</code> should contain a valid email.
 Otherwise you may annoy your users.</p>
 <h2>Selector</h2>
-<div class="codeBlock">
+<div class="codeBlock cssExample">
   <div class="highlight">
-    <pre>[href^="mailto"]</pre>
+    <pre><span class="o">[</span><span class="nt">href</span><span class="o">^=</span><span class="err">"</span><span class="nt">mailto</span><span class="err">"</span><span class="o">]</span></pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -406,9 +406,9 @@ Otherwise you may annoy your users.</p>
 <h2>Description</h2>
 <p class="styleguide"><code class="styleguide">&lt;main&gt;</code> should be unique. Isn&#39;t that obvious?</p>
 <h2>Selector</h2>
-<div class="codeBlock">
+<div class="codeBlock cssExample">
   <div class="highlight">
-    <pre>main:not(:first-of-type)</pre>
+    <pre><span class="nt">main</span><span class="nd">:not</span><span class="o">(</span><span class="nd">:first-of-type</span><span class="o">)</span></pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -435,10 +435,10 @@ Otherwise you may annoy your users.</p>
 <li><a href="http://www.w3.org/TR/WCAG20/#navigation-mechanisms-skip">http://www.w3.org/TR/WCAG20/#navigation-mechanisms-skip</a></li>
 </ul>
 <h2>Selector</h2>
-<div class="codeBlock">
+<div class="codeBlock cssExample">
   <div class="highlight">
-    <pre>[id*="search"]:not([role="search"]),
-[class*="search"]:not([role="search"])</pre>
+    <pre><span class="o">[</span><span class="nt">id</span><span class="o">*=</span><span class="err">"</span><span class="nt">search</span><span class="err">"</span><span class="o">]</span><span class="nd">:not</span><span class="o">([</span><span class="nt">role</span><span class="o">=</span><span class="err">"</span><span class="nt">search</span><span class="err">"</span><span class="o">]),</span>
+<span class="o">[</span><span class="nt">class</span><span class="o">*=</span><span class="err">"</span><span class="nt">search</span><span class="err">"</span><span class="o">]</span><span class="nd">:not</span><span class="o">([</span><span class="nt">role</span><span class="o">=</span><span class="err">"</span><span class="nt">search</span><span class="err">"</span><span class="o">])</span></pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -465,9 +465,9 @@ Otherwise you may annoy your users.</p>
 <h2>Description</h2>
 <p class="styleguide">A <code class="styleguide">[placeholder]</code> is not a label, isn&#39;t it?</p>
 <h2>Selector</h2>
-<div class="codeBlock">
+<div class="codeBlock cssExample">
   <div class="highlight">
-    <pre>[placeholder]:not([title]):not([aria-label]):not([aria-labelledby])</pre>
+    <pre><span class="o">[</span><span class="nt">placeholder</span><span class="o">]</span><span class="nd">:not</span><span class="o">([</span><span class="nt">title</span><span class="o">])</span><span class="nd">:not</span><span class="o">([</span><span class="nt">aria-label</span><span class="o">])</span><span class="nd">:not</span><span class="o">([</span><span class="nt">aria-labelledby</span><span class="o">])</span></pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -492,10 +492,10 @@ Otherwise you may annoy your users.</p>
 <li><a href="http://www.w3.org/TR/WCAG20/#minimize-error-cues">http://www.w3.org/TR/WCAG20/#minimize-error-cues</a></li>
 </ul>
 <h2>Selector</h2>
-<div class="codeBlock">
+<div class="codeBlock cssExample">
   <div class="highlight">
-    <pre>[required],
-[aria-required]</pre>
+    <pre><span class="o">[</span><span class="nt">required</span><span class="o">],</span>
+<span class="o">[</span><span class="nt">aria-required</span><span class="o">]</span></pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -525,9 +525,9 @@ Otherwise you may annoy your users.</p>
 <ul class="styleguide"><li><a href="https://github.com/Heydon/REVENGE.CSS/blob/master/revenge.css#L174">https://github.com/Heydon/REVENGE.CSS/blob/master/revenge.css#L174</a></li>
 </ul>
 <h2>Selector</h2>
-<div class="codeBlock">
+<div class="codeBlock cssExample">
   <div class="highlight">
-    <pre>a[role="button"]</pre>
+    <pre><span class="nt">a</span><span class="o">[</span><span class="nt">role</span><span class="o">=</span><span class="err">"</span><span class="nt">button</span><span class="err">"</span><span class="o">]</span></pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -552,9 +552,9 @@ Otherwise you may annoy your users.</p>
 <li><a href="http://www.w3.org/TR/WCAG20/#content-structure-separation-sequence">http://www.w3.org/TR/WCAG20/#content-structure-separation-sequence</a></li>
 </ul>
 <h2>Selector</h2>
-<div class="codeBlock">
+<div class="codeBlock cssExample">
   <div class="highlight">
-    <pre>table[role="presentation"]</pre>
+    <pre><span class="nt">table</span><span class="o">[</span><span class="nt">role</span><span class="o">=</span><span class="err">"</span><span class="nt">presentation</span><span class="err">"</span><span class="o">]</span></pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -602,9 +602,9 @@ You could use a <code class="styleguide">[title]</code>, for example.</p>
 <li><a href="http://www.w3.org/TR/WCAG-TECHS/F22.html">http://www.w3.org/TR/WCAG-TECHS/F22.html</a></li>
 </ul>
 <h2>Selector</h2>
-<div class="codeBlock">
+<div class="codeBlock cssExample">
   <div class="highlight">
-    <pre>[target$="blank"]</pre>
+    <pre><span class="o">[</span><span class="nt">target</span><span class="err">$</span><span class="o">=</span><span class="err">"</span><span class="nt">blank</span><span class="err">"</span><span class="o">]</span></pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -626,9 +626,9 @@ You could use a <code class="styleguide">[title]</code>, for example.</p>
 <p class="styleguide">A <code class="styleguide">&lt;href=&quot;tel:&quot;&gt;</code> should contain a valid phone number.
 Otherwise you may make your users to call anubody.</p>
 <h2>Selector</h2>
-<div class="codeBlock">
+<div class="codeBlock cssExample">
   <div class="highlight">
-    <pre>[href^="tel"]</pre>
+    <pre><span class="o">[</span><span class="nt">href</span><span class="o">^=</span><span class="err">"</span><span class="nt">tel</span><span class="err">"</span><span class="o">]</span></pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -654,9 +654,9 @@ Otherwise you may make your users to call anubody.</p>
 <li><a href="http://www.w3.org/TR/WCAG-TECHS/H63.html">http://www.w3.org/TR/WCAG-TECHS/H63.html</a></li>
 </ul>
 <h2>Selector</h2>
-<div class="codeBlock">
+<div class="codeBlock cssExample">
   <div class="highlight">
-    <pre>th[scope]</pre>
+    <pre><span class="nt">th</span><span class="o">[</span><span class="nt">scope</span><span class="o">]</span></pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -713,10 +713,10 @@ Otherwise you may make your users to call anubody.</p>
 <h2>Description</h2>
 <p class="styleguide">A <code class="styleguide">&lt;time&gt;</code> or <code class="styleguide">[datetime]</code> content should be an understandable and well formated date.</p>
 <h2>Selector</h2>
-<div class="codeBlock">
+<div class="codeBlock cssExample">
   <div class="highlight">
-    <pre>time,
-[datetime]</pre>
+    <pre><span class="nt">time</span><span class="o">,</span>
+<span class="o">[</span><span class="nt">datetime</span><span class="o">]</span></pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -743,11 +743,11 @@ Otherwise you may make your users to call anubody.</p>
 <li><a href="http://www.w3.org/TR/html51/semantics.html#alt">http://www.w3.org/TR/html51/semantics.html#alt</a></li>
 </ul>
 <h2>Selector</h2>
-<div class="codeBlock">
+<div class="codeBlock cssExample">
   <div class="highlight">
-    <pre>img[alt][title],
-area[alt][title],
-svg[aria-label][title]</pre>
+    <pre><span class="nt">img</span><span class="o">[</span><span class="nt">alt</span><span class="o">][</span><span class="nt">title</span><span class="o">],</span>
+<span class="nt">area</span><span class="o">[</span><span class="nt">alt</span><span class="o">][</span><span class="nt">title</span><span class="o">],</span>
+<span class="nt">svg</span><span class="o">[</span><span class="nt">aria-label</span><span class="o">][</span><span class="nt">title</span><span class="o">]</span></pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -775,10 +775,10 @@ svg[aria-label][title]</pre>
 <li><a href="http://www.w3.org/TR/WCAG20/#media-equiv-text-doc">http://www.w3.org/TR/WCAG20/#media-equiv-text-doc</a></li>
 </ul>
 <h2>Selector</h2>
-<div class="codeBlock">
+<div class="codeBlock cssExample">
   <div class="highlight">
-    <pre>video,
-audio</pre>
+    <pre><span class="nt">video</span><span class="o">,</span>
+<span class="nt">audio</span></pre>
   </div>
 </div>
 <h2>Test</h2>

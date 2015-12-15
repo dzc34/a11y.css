@@ -188,9 +188,9 @@
 <ul class="styleguide"><li><a href="https://github.com/Heydon/REVENGE.CSS/blob/master/revenge.css#L185">https://github.com/Heydon/REVENGE.CSS/blob/master/revenge.css#L185</a></li>
 </ul>
 <h2>Selector</h2>
-<div class="codeBlock">
+<div class="codeBlock cssExample">
   <div class="highlight">
-    <pre>[class*="toggle"]:not([aria-expanded]):not([aria-haspopup])</pre>
+    <pre><span class="o">[</span><span class="nt">class</span><span class="o">*=</span><span class="err">"</span><span class="nt">toggle</span><span class="err">"</span><span class="o">]</span><span class="nd">:not</span><span class="o">([</span><span class="nt">aria-expanded</span><span class="o">])</span><span class="nd">:not</span><span class="o">([</span><span class="nt">aria-haspopup</span><span class="o">])</span></pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -217,10 +217,10 @@
 <li><a href="http://www.punkchip.com/autoplay-is-bad-for-all-users/">http://www.punkchip.com/autoplay-is-bad-for-all-users/</a></li>
 </ul>
 <h2>Selector</h2>
-<div class="codeBlock">
+<div class="codeBlock cssExample">
   <div class="highlight">
-    <pre>video[autoplay],
-audio[autoplay]</pre>
+    <pre><span class="nt">video</span><span class="o">[</span><span class="nt">autoplay</span><span class="o">],</span>
+<span class="nt">audio</span><span class="o">[</span><span class="nt">autoplay</span><span class="o">]</span></pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -248,10 +248,10 @@ audio[autoplay]</pre>
 <li><a href="http://www.w3.org/TR/WCAG-TECHS/G4.html">http://www.w3.org/TR/WCAG-TECHS/G4.html</a></li>
 </ul>
 <h2>Selector</h2>
-<div class="codeBlock">
+<div class="codeBlock cssExample">
   <div class="highlight">
-    <pre>video:not([controls]),
-audio:not([controls])</pre>
+    <pre><span class="nt">video</span><span class="nd">:not</span><span class="o">([</span><span class="nt">controls</span><span class="o">]),</span>
+<span class="nt">audio</span><span class="nd">:not</span><span class="o">([</span><span class="nt">controls</span><span class="o">])</span></pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -283,13 +283,13 @@ That should be double-checked.</p>
 <li><a href="http://www.w3.org/TR/WCAG-TECHS/F38.html">http://www.w3.org/TR/WCAG-TECHS/F38.html</a></li>
 </ul>
 <h2>Selector</h2>
-<div class="codeBlock">
+<div class="codeBlock cssExample">
   <div class="highlight">
-    <pre>img[alt=""],
-area[alt=""],
-input[type="image"][alt=""],
-embed[type="image"][alt=""],
-object[type="image"][alt=""]</pre>
+    <pre><span class="nt">img</span><span class="o">[</span><span class="nt">alt</span><span class="o">=</span><span class="err">""</span><span class="o">],</span>
+<span class="nt">area</span><span class="o">[</span><span class="nt">alt</span><span class="o">=</span><span class="err">""</span><span class="o">],</span>
+<span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="err">"</span><span class="nt">image</span><span class="err">"</span><span class="o">][</span><span class="nt">alt</span><span class="o">=</span><span class="err">""</span><span class="o">],</span>
+<span class="nt">embed</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="err">"</span><span class="nt">image</span><span class="err">"</span><span class="o">][</span><span class="nt">alt</span><span class="o">=</span><span class="err">""</span><span class="o">],</span>
+<span class="nt">object</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="err">"</span><span class="nt">image</span><span class="err">"</span><span class="o">][</span><span class="nt">alt</span><span class="o">=</span><span class="err">""</span><span class="o">]</span></pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -315,9 +315,9 @@ Should probably be a <code class="styleguide">&lt;button&gt;</code> or at least 
 <li><a href="https://github.com/yahoo/debugCSS/blob/master/debugCSS.css#L386">https://github.com/yahoo/debugCSS/blob/master/debugCSS.css#L386</a></li>
 </ul>
 <h2>Selector</h2>
-<div class="codeBlock">
+<div class="codeBlock cssExample">
   <div class="highlight">
-    <pre>a[href="#"]:not([role="button"])</pre>
+    <pre><span class="nt">a</span><span class="o">[</span><span class="nt">href</span><span class="o">=</span><span class="err">"#"</span><span class="o">]</span><span class="nd">:not</span><span class="o">([</span><span class="nt">role</span><span class="o">=</span><span class="err">"</span><span class="nt">button</span><span class="err">"</span><span class="o">])</span></pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -347,11 +347,11 @@ We also use the <code class="styleguide">:-moz-only-whitespace</code> pseudo-cla
 <li><a href="https://css-tricks.com/almanac/selectors/b/blank/">https://css-tricks.com/almanac/selectors/b/blank/</a></li>
 </ul>
 <h2>Selector</h2>
-<div class="codeBlock">
+<div class="codeBlock cssExample">
   <div class="highlight">
-    <pre>body *:empty:not([hidden]):not([aria-hidden]):not(iframe):not(textarea):not(area):not(base):not(br):not(col):not(command):not(embed):not(hr):not(img):not(input):not(keygen):not(link):not(meta):not(param):not(source):not(track):not(wbr):not(title)
-body *:blank:not([hidden]):not([aria-hidden]):not(iframe):not(textarea):not(area):not(base):not(br):not(col):not(command):not(embed):not(hr):not(img):not(input):not(keygen):not(link):not(meta):not(param):not(source):not(track):not(wbr):not(title)
-body *:-moz-only-whitespace:not([hidden]):not([aria-hidden]):not(iframe):not(textarea):not(area):not(base):not(br):not(col):not(command):not(embed):not(hr):not(img):not(input):not(keygen):not(link):not(meta):not(param):not(source):not(track):not(wbr):not(title)</pre>
+    <pre><span class="nt">body</span> <span class="o">*</span><span class="nd">:empty:not</span><span class="o">([</span><span class="nt">hidden</span><span class="o">])</span><span class="nd">:not</span><span class="o">([</span><span class="nt">aria-hidden</span><span class="o">])</span><span class="nd">:not</span><span class="o">(</span><span class="nt">iframe</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">textarea</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">area</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">base</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">br</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">col</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">command</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">embed</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">hr</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">img</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">input</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">keygen</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">link</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">meta</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">param</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">source</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">track</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">wbr</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">title</span><span class="o">)</span>
+<span class="nt">body</span> <span class="o">*</span><span class="nd">:blank:not</span><span class="o">([</span><span class="nt">hidden</span><span class="o">])</span><span class="nd">:not</span><span class="o">([</span><span class="nt">aria-hidden</span><span class="o">])</span><span class="nd">:not</span><span class="o">(</span><span class="nt">iframe</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">textarea</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">area</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">base</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">br</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">col</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">command</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">embed</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">hr</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">img</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">input</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">keygen</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">link</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">meta</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">param</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">source</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">track</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">wbr</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">title</span><span class="o">)</span>
+<span class="nt">body</span> <span class="o">*</span><span class="nd">:-moz-only-whitespace:not</span><span class="o">([</span><span class="nt">hidden</span><span class="o">])</span><span class="nd">:not</span><span class="o">([</span><span class="nt">aria-hidden</span><span class="o">])</span><span class="nd">:not</span><span class="o">(</span><span class="nt">iframe</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">textarea</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">area</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">base</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">br</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">col</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">command</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">embed</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">hr</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">img</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">input</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">keygen</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">link</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">meta</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">param</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">source</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">track</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">wbr</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">title</span><span class="o">)</span></pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -385,10 +385,10 @@ body *:-moz-only-whitespace:not([hidden]):not([aria-hidden]):not(iframe):not(tex
 <li><a href="http://www.w3.org/TR/WCAG-TECHS/H28.html">http://www.w3.org/TR/WCAG-TECHS/H28.html</a></li>
 </ul>
 <h2>Selector</h2>
-<div class="codeBlock">
+<div class="codeBlock cssExample">
   <div class="highlight">
-    <pre>abbr:not([title]),
-abbr[title=""]</pre>
+    <pre><span class="nt">abbr</span><span class="nd">:not</span><span class="o">([</span><span class="nt">title</span><span class="o">]),</span>
+<span class="nt">abbr</span><span class="o">[</span><span class="nt">title</span><span class="o">=</span><span class="err">""</span><span class="o">]</span></pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -417,10 +417,10 @@ Always.</p>
 <li><a href="https://github.com/yahoo/debugCSS/blob/master/debugCSS.css#L449">https://github.com/yahoo/debugCSS/blob/master/debugCSS.css#L449</a></li>
 </ul>
 <h2>Selector</h2>
-<div class="codeBlock">
+<div class="codeBlock cssExample">
   <div class="highlight">
-    <pre>fieldset &gt; *:not(legend):first-child,
-fieldset &gt; legend:not(:first-child)</pre>
+    <pre><span class="nt">fieldset</span> <span class="o">&gt;</span> <span class="o">*</span><span class="nd">:not</span><span class="o">(</span><span class="nt">legend</span><span class="o">)</span><span class="nd">:first-child</span><span class="o">,</span>
+<span class="nt">fieldset</span> <span class="o">&gt;</span> <span class="nt">legend</span><span class="nd">:not</span><span class="o">(</span><span class="nd">:first-child</span><span class="o">)</span></pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -452,9 +452,9 @@ fieldset &gt; legend:not(:first-child)</pre>
 <li><a href="http://www.w3.org/TR/html51/semantics.html#alt">http://www.w3.org/TR/html51/semantics.html#alt</a></li>
 </ul>
 <h2>Selector</h2>
-<div class="codeBlock">
+<div class="codeBlock cssExample">
   <div class="highlight">
-    <pre>figure:not([role="group"])</pre>
+    <pre><span class="nt">figure</span><span class="nd">:not</span><span class="o">([</span><span class="nt">role</span><span class="o">=</span><span class="err">"</span><span class="nt">group</span><span class="err">"</span><span class="o">])</span></pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -486,9 +486,9 @@ Should probably be a <code class="styleguide">&lt;button&gt;</code> or at least 
 <li><a href="https://github.com/yahoo/debugCSS/blob/master/debugCSS.css#L392">https://github.com/yahoo/debugCSS/blob/master/debugCSS.css#L392</a></li>
 </ul>
 <h2>Selector</h2>
-<div class="codeBlock">
+<div class="codeBlock cssExample">
   <div class="highlight">
-    <pre>a[href^="javascript"]:not([role="button"])</pre>
+    <pre><span class="nt">a</span><span class="o">[</span><span class="nt">href</span><span class="o">^=</span><span class="err">"</span><span class="nt">javascript</span><span class="err">"</span><span class="o">]</span><span class="nd">:not</span><span class="o">([</span><span class="nt">role</span><span class="o">=</span><span class="err">"</span><span class="nt">button</span><span class="err">"</span><span class="o">])</span></pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -516,10 +516,10 @@ Should probably be a <code class="styleguide">&lt;button&gt;</code> or at least 
 <li><a href="http://www.w3.org/TR/html5/grouping-content.html#the-dl-element">http://www.w3.org/TR/html5/grouping-content.html#the-dl-element</a></li>
 </ul>
 <h2>Selector</h2>
-<div class="codeBlock">
+<div class="codeBlock cssExample">
   <div class="highlight">
-    <pre>dt + :not(dd),
-:not(dt):not(dd) + dd</pre>
+    <pre><span class="nt">dt</span> <span class="o">+</span> <span class="nd">:not</span><span class="o">(</span><span class="nt">dd</span><span class="o">),</span>
+<span class="nd">:not</span><span class="o">(</span><span class="nt">dt</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">dd</span><span class="o">)</span> <span class="o">+</span> <span class="nt">dd</span></pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -565,11 +565,11 @@ Any other imbrication may be a crime somewhere.</p>
 <li><a href="http://www.w3.org/TR/html5/grouping-content.html#the-dl-element">http://www.w3.org/TR/html5/grouping-content.html#the-dl-element</a></li>
 </ul>
 <h2>Selector</h2>
-<div class="codeBlock">
+<div class="codeBlock cssExample">
   <div class="highlight">
-    <pre>:not(dl) &gt; dt,
-:not(dl) &gt; dd,
-dl &gt; :not(dt):not(dd)</pre>
+    <pre><span class="nd">:not</span><span class="o">(</span><span class="nt">dl</span><span class="o">)</span> <span class="o">&gt;</span> <span class="nt">dt</span><span class="o">,</span>
+<span class="nd">:not</span><span class="o">(</span><span class="nt">dl</span><span class="o">)</span> <span class="o">&gt;</span> <span class="nt">dd</span><span class="o">,</span>
+<span class="nt">dl</span> <span class="o">&gt;</span> <span class="nd">:not</span><span class="o">(</span><span class="nt">dt</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">dd</span><span class="o">)</span></pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -618,9 +618,9 @@ dl &gt; :not(dt):not(dd)</pre>
 <li><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-figcaption-element">http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-figcaption-element</a></li>
 </ul>
 <h2>Selector</h2>
-<div class="codeBlock">
+<div class="codeBlock cssExample">
   <div class="highlight">
-    <pre>:not(figure) &gt; figcaption</pre>
+    <pre><span class="nd">:not</span><span class="o">(</span><span class="nt">figure</span><span class="o">)</span> <span class="o">&gt;</span> <span class="nt">figcaption</span></pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -649,11 +649,11 @@ dl &gt; :not(dt):not(dd)</pre>
 <li><a href="http://www.w3.org/TR/html5/grouping-content.html#the-li-element">http://www.w3.org/TR/html5/grouping-content.html#the-li-element</a></li>
 </ul>
 <h2>Selector</h2>
-<div class="codeBlock">
+<div class="codeBlock cssExample">
   <div class="highlight">
-    <pre>ul &gt; :not(li),
-ol &gt; :not(li),
-:not(ul):not(ol) &gt; li</pre>
+    <pre><span class="nt">ul</span> <span class="o">&gt;</span> <span class="nd">:not</span><span class="o">(</span><span class="nt">li</span><span class="o">),</span>
+<span class="nt">ol</span> <span class="o">&gt;</span> <span class="nd">:not</span><span class="o">(</span><span class="nt">li</span><span class="o">),</span>
+<span class="nd">:not</span><span class="o">(</span><span class="nt">ul</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">ol</span><span class="o">)</span> <span class="o">&gt;</span> <span class="nt">li</span></pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -689,15 +689,15 @@ ol &gt; :not(li),
 <ul class="styleguide"><li><a href="https://github.com/yahoo/debugCSS/blob/master/debugCSS.css#L277">https://github.com/yahoo/debugCSS/blob/master/debugCSS.css#L277</a></li>
 </ul>
 <h2>Selector</h2>
-<div class="codeBlock">
+<div class="codeBlock cssExample">
   <div class="highlight">
-    <pre>select &gt; :not(option):not(optgroup),
-:not(select):not(optgroup) &gt; option,
-optgroup &gt; :not(option),
-:not(select) &gt; optgroup,
-:not(fieldset) &gt; legend,
-tr &gt; :not(td):not(th),
-table &gt; *:not(thead):not(tfoot):not(tbody):not(tr):not(colgroup):not(caption)</pre>
+    <pre><span class="nt">select</span> <span class="o">&gt;</span> <span class="nd">:not</span><span class="o">(</span><span class="nt">option</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">optgroup</span><span class="o">),</span>
+<span class="nd">:not</span><span class="o">(</span><span class="nt">select</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">optgroup</span><span class="o">)</span> <span class="o">&gt;</span> <span class="nt">option</span><span class="o">,</span>
+<span class="nt">optgroup</span> <span class="o">&gt;</span> <span class="nd">:not</span><span class="o">(</span><span class="nt">option</span><span class="o">),</span>
+<span class="nd">:not</span><span class="o">(</span><span class="nt">select</span><span class="o">)</span> <span class="o">&gt;</span> <span class="nt">optgroup</span><span class="o">,</span>
+<span class="nd">:not</span><span class="o">(</span><span class="nt">fieldset</span><span class="o">)</span> <span class="o">&gt;</span> <span class="nt">legend</span><span class="o">,</span>
+<span class="nt">tr</span> <span class="o">&gt;</span> <span class="nd">:not</span><span class="o">(</span><span class="nt">td</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">th</span><span class="o">),</span>
+<span class="nt">table</span> <span class="o">&gt;</span> <span class="o">*</span><span class="nd">:not</span><span class="o">(</span><span class="nt">thead</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">tfoot</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">tbody</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">tr</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">colgroup</span><span class="o">)</span><span class="nd">:not</span><span class="o">(</span><span class="nt">caption</span><span class="o">)</span></pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -724,19 +724,19 @@ You could use a <code class="styleguide">&lt;span&gt;</code> instead.</p>
 <ul class="styleguide"><li><a href="https://github.com/Heydon/REVENGE.CSS/blob/master/revenge.css#L326">https://github.com/Heydon/REVENGE.CSS/blob/master/revenge.css#L326</a></li>
 </ul>
 <h2>Selector</h2>
-<div class="codeBlock">
+<div class="codeBlock cssExample">
   <div class="highlight">
-    <pre>b div,
-i div,
-q div,
-em div,
-abbr div,
-cite div,
-code div,
-span div,
-small div,
-label div,
-strong div</pre>
+    <pre><span class="nt">b</span> <span class="nt">div</span><span class="o">,</span>
+<span class="nt">i</span> <span class="nt">div</span><span class="o">,</span>
+<span class="nt">q</span> <span class="nt">div</span><span class="o">,</span>
+<span class="nt">em</span> <span class="nt">div</span><span class="o">,</span>
+<span class="nt">abbr</span> <span class="nt">div</span><span class="o">,</span>
+<span class="nt">cite</span> <span class="nt">div</span><span class="o">,</span>
+<span class="nt">code</span> <span class="nt">div</span><span class="o">,</span>
+<span class="nt">span</span> <span class="nt">div</span><span class="o">,</span>
+<span class="nt">small</span> <span class="nt">div</span><span class="o">,</span>
+<span class="nt">label</span> <span class="nt">div</span><span class="o">,</span>
+<span class="nt">strong</span> <span class="nt">div</span></pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -760,10 +760,10 @@ strong div</pre>
 <ul class="styleguide"><li><a href="https://github.com/yahoo/debugCSS/blob/master/debugCSS.css#L311">https://github.com/yahoo/debugCSS/blob/master/debugCSS.css#L311</a></li>
 </ul>
 <h2>Selector</h2>
-<div class="codeBlock">
+<div class="codeBlock cssExample">
   <div class="highlight">
-    <pre>table:not([role="presentation"]) &gt; caption + tbody,
-table:not([role="presentation"]) &gt; tbody:first-child</pre>
+    <pre><span class="nt">table</span><span class="nd">:not</span><span class="o">([</span><span class="nt">role</span><span class="o">=</span><span class="err">"</span><span class="nt">presentation</span><span class="err">"</span><span class="o">])</span> <span class="o">&gt;</span> <span class="nt">caption</span> <span class="o">+</span> <span class="nt">tbody</span><span class="o">,</span>
+<span class="nt">table</span><span class="nd">:not</span><span class="o">([</span><span class="nt">role</span><span class="o">=</span><span class="err">"</span><span class="nt">presentation</span><span class="err">"</span><span class="o">])</span> <span class="o">&gt;</span> <span class="nt">tbody</span><span class="nd">:first-child</span></pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -819,9 +819,9 @@ table:not([role="presentation"]) &gt; tbody:first-child</pre>
 <li><a href="http://www.w3.org/TR/WCAG-TECHS/F65.html">http://www.w3.org/TR/WCAG-TECHS/F65.html</a></li>
 </ul>
 <h2>Selector</h2>
-<div class="codeBlock">
+<div class="codeBlock cssExample">
   <div class="highlight">
-    <pre>svg:not([role="presentation"]):not([role="img"]):not([aria-label]):not([aria-labelledby])</pre>
+    <pre><span class="nt">svg</span><span class="nd">:not</span><span class="o">([</span><span class="nt">role</span><span class="o">=</span><span class="err">"</span><span class="nt">presentation</span><span class="err">"</span><span class="o">])</span><span class="nd">:not</span><span class="o">([</span><span class="nt">role</span><span class="o">=</span><span class="err">"</span><span class="nt">img</span><span class="err">"</span><span class="o">])</span><span class="nd">:not</span><span class="o">([</span><span class="nt">aria-label</span><span class="o">])</span><span class="nd">:not</span><span class="o">([</span><span class="nt">aria-labelledby</span><span class="o">])</span></pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -850,14 +850,14 @@ table:not([role="presentation"]) &gt; tbody:first-child</pre>
 <h2>Description</h2>
 <p class="styleguide">Don&#39;t laugh, shit happens.</p>
 <h2>Selector</h2>
-<div class="codeBlock">
+<div class="codeBlock cssExample">
   <div class="highlight">
-    <pre>[id*="NaN"],
-[id*="null"],
-[class*="NaN"],
-[class*="null"],
-[id*="undefined"],
-[class*="undefined"]</pre>
+    <pre><span class="o">[</span><span class="nt">id</span><span class="o">*=</span><span class="err">"</span><span class="nt">NaN</span><span class="err">"</span><span class="o">],</span>
+<span class="o">[</span><span class="nt">id</span><span class="o">*=</span><span class="err">"</span><span class="nt">null</span><span class="err">"</span><span class="o">],</span>
+<span class="o">[</span><span class="nt">class</span><span class="o">*=</span><span class="err">"</span><span class="nt">NaN</span><span class="err">"</span><span class="o">],</span>
+<span class="o">[</span><span class="nt">class</span><span class="o">*=</span><span class="err">"</span><span class="nt">null</span><span class="err">"</span><span class="o">],</span>
+<span class="o">[</span><span class="nt">id</span><span class="o">*=</span><span class="err">"</span><span class="nt">undefined</span><span class="err">"</span><span class="o">],</span>
+<span class="o">[</span><span class="nt">class</span><span class="o">*=</span><span class="err">"</span><span class="nt">undefined</span><span class="err">"</span><span class="o">]</span></pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -883,15 +883,15 @@ They must not be used as wrappers!</p>
 <li><a href="http://www.w3.org/TR/html5/dom.html#sectioning-content">http://www.w3.org/TR/html5/dom.html#sectioning-content</a></li>
 </ul>
 <h2>Selector</h2>
-<div class="codeBlock">
+<div class="codeBlock cssExample">
   <div class="highlight">
-    <pre>aside &gt; aside:first-child,
-article &gt; aside:first-child,
-aside &gt; article:first-child,
-aside &gt; section:first-child,
-section &gt; section:first-child,
-article &gt; section:first-child,
-article &gt; article:first-child</pre>
+    <pre><span class="nt">aside</span> <span class="o">&gt;</span> <span class="nt">aside</span><span class="nd">:first-child</span><span class="o">,</span>
+<span class="nt">article</span> <span class="o">&gt;</span> <span class="nt">aside</span><span class="nd">:first-child</span><span class="o">,</span>
+<span class="nt">aside</span> <span class="o">&gt;</span> <span class="nt">article</span><span class="nd">:first-child</span><span class="o">,</span>
+<span class="nt">aside</span> <span class="o">&gt;</span> <span class="nt">section</span><span class="nd">:first-child</span><span class="o">,</span>
+<span class="nt">section</span> <span class="o">&gt;</span> <span class="nt">section</span><span class="nd">:first-child</span><span class="o">,</span>
+<span class="nt">article</span> <span class="o">&gt;</span> <span class="nt">section</span><span class="nd">:first-child</span><span class="o">,</span>
+<span class="nt">article</span> <span class="o">&gt;</span> <span class="nt">article</span><span class="nd">:first-child</span></pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -920,15 +920,15 @@ article &gt; article:first-child</pre>
 <li><a href="http://www.la-grange.net/2015/03/11/visible">http://www.la-grange.net/2015/03/11/visible</a></li>
 </ul>
 <h2>Selector</h2>
-<div class="codeBlock">
+<div class="codeBlock cssExample">
   <div class="highlight">
-    <pre>img[src*="1px.gif"]:not([role="presentation"]),
-img[src*="1x1.gif"]:not([role="presentation"]),
-img[src*="clear.gif"]:not([role="presentation"]),
-img[src*="spacer.gif"]:not([role="presentation"]),
-img[src*="dotclear.gif"]:not([role="presentation"]),
-img[src*="transparent.gif"]:not([role="presentation"]),
-img[src*="pixel-1x1-clear.gif"]:not([role="presentation"])</pre>
+    <pre><span class="nt">img</span><span class="o">[</span><span class="nt">src</span><span class="o">*=</span><span class="err">"</span><span class="nt">1px</span><span class="nc">.gif</span><span class="err">"</span><span class="o">]</span><span class="nd">:not</span><span class="o">([</span><span class="nt">role</span><span class="o">=</span><span class="err">"</span><span class="nt">presentation</span><span class="err">"</span><span class="o">]),</span>
+<span class="nt">img</span><span class="o">[</span><span class="nt">src</span><span class="o">*=</span><span class="err">"</span><span class="nt">1x1</span><span class="nc">.gif</span><span class="err">"</span><span class="o">]</span><span class="nd">:not</span><span class="o">([</span><span class="nt">role</span><span class="o">=</span><span class="err">"</span><span class="nt">presentation</span><span class="err">"</span><span class="o">]),</span>
+<span class="nt">img</span><span class="o">[</span><span class="nt">src</span><span class="o">*=</span><span class="err">"</span><span class="nt">clear</span><span class="nc">.gif</span><span class="err">"</span><span class="o">]</span><span class="nd">:not</span><span class="o">([</span><span class="nt">role</span><span class="o">=</span><span class="err">"</span><span class="nt">presentation</span><span class="err">"</span><span class="o">]),</span>
+<span class="nt">img</span><span class="o">[</span><span class="nt">src</span><span class="o">*=</span><span class="err">"</span><span class="nt">spacer</span><span class="nc">.gif</span><span class="err">"</span><span class="o">]</span><span class="nd">:not</span><span class="o">([</span><span class="nt">role</span><span class="o">=</span><span class="err">"</span><span class="nt">presentation</span><span class="err">"</span><span class="o">]),</span>
+<span class="nt">img</span><span class="o">[</span><span class="nt">src</span><span class="o">*=</span><span class="err">"</span><span class="nt">dotclear</span><span class="nc">.gif</span><span class="err">"</span><span class="o">]</span><span class="nd">:not</span><span class="o">([</span><span class="nt">role</span><span class="o">=</span><span class="err">"</span><span class="nt">presentation</span><span class="err">"</span><span class="o">]),</span>
+<span class="nt">img</span><span class="o">[</span><span class="nt">src</span><span class="o">*=</span><span class="err">"</span><span class="nt">transparent</span><span class="nc">.gif</span><span class="err">"</span><span class="o">]</span><span class="nd">:not</span><span class="o">([</span><span class="nt">role</span><span class="o">=</span><span class="err">"</span><span class="nt">presentation</span><span class="err">"</span><span class="o">]),</span>
+<span class="nt">img</span><span class="o">[</span><span class="nt">src</span><span class="o">*=</span><span class="err">"</span><span class="nt">pixel-1x1-clear</span><span class="nc">.gif</span><span class="err">"</span><span class="o">]</span><span class="nd">:not</span><span class="o">([</span><span class="nt">role</span><span class="o">=</span><span class="err">"</span><span class="nt">presentation</span><span class="err">"</span><span class="o">])</span></pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -956,10 +956,10 @@ And it must be the <code class="styleguide">:first-child</code>, by the way.</p>
 <li><a href="http://www.w3.org/TR/WCAG-TECHS/H39.html">http://www.w3.org/TR/WCAG-TECHS/H39.html</a></li>
 </ul>
 <h2>Selector</h2>
-<div class="codeBlock">
+<div class="codeBlock cssExample">
   <div class="highlight">
-    <pre>table:not([role="presentation"]) &gt; caption:not(:first-child),
-table:not([role="presentation"]) &gt; *:first-child:not(caption)</pre>
+    <pre><span class="nt">table</span><span class="nd">:not</span><span class="o">([</span><span class="nt">role</span><span class="o">=</span><span class="err">"</span><span class="nt">presentation</span><span class="err">"</span><span class="o">])</span> <span class="o">&gt;</span> <span class="nt">caption</span><span class="nd">:not</span><span class="o">(</span><span class="nd">:first-child</span><span class="o">),</span>
+<span class="nt">table</span><span class="nd">:not</span><span class="o">([</span><span class="nt">role</span><span class="o">=</span><span class="err">"</span><span class="nt">presentation</span><span class="err">"</span><span class="o">])</span> <span class="o">&gt;</span> <span class="o">*</span><span class="nd">:first-child:not</span><span class="o">(</span><span class="nt">caption</span><span class="o">)</span></pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -1016,10 +1016,10 @@ Should be double checked!</p>
 <li><a href="https://github.com/yahoo/debugCSS/blob/master/debugCSS.css#L331">https://github.com/yahoo/debugCSS/blob/master/debugCSS.css#L331</a></li>
 </ul>
 <h2>Selector</h2>
-<div class="codeBlock">
+<div class="codeBlock cssExample">
   <div class="highlight">
-    <pre>table:not([role="presentation"]) &gt; tr:only-child,
-table:not([role="presentation"]) &gt; tbody &gt; tr:only-child</pre>
+    <pre><span class="nt">table</span><span class="nd">:not</span><span class="o">([</span><span class="nt">role</span><span class="o">=</span><span class="err">"</span><span class="nt">presentation</span><span class="err">"</span><span class="o">])</span> <span class="o">&gt;</span> <span class="nt">tr</span><span class="nd">:only-child</span><span class="o">,</span>
+<span class="nt">table</span><span class="nd">:not</span><span class="o">([</span><span class="nt">role</span><span class="o">=</span><span class="err">"</span><span class="nt">presentation</span><span class="err">"</span><span class="o">])</span> <span class="o">&gt;</span> <span class="nt">tbody</span> <span class="o">&gt;</span> <span class="nt">tr</span><span class="nd">:only-child</span></pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -1055,11 +1055,11 @@ table:not([role="presentation"]) &gt; tbody &gt; tr:only-child</pre>
 <li><a href="https://github.com/yahoo/debugCSS/blob/master/debugCSS.css#L326">https://github.com/yahoo/debugCSS/blob/master/debugCSS.css#L326</a></li>
 </ul>
 <h2>Selector</h2>
-<div class="codeBlock">
+<div class="codeBlock cssExample">
   <div class="highlight">
-    <pre>table &gt; tfoot ~ thead,
-table &gt; tbody ~ tfoot,
-table &gt; tbody ~ thead</pre>
+    <pre><span class="nt">table</span> <span class="o">&gt;</span> <span class="nt">tfoot</span> <span class="o">~</span> <span class="nt">thead</span><span class="o">,</span>
+<span class="nt">table</span> <span class="o">&gt;</span> <span class="nt">tbody</span> <span class="o">~</span> <span class="nt">tfoot</span><span class="o">,</span>
+<span class="nt">table</span> <span class="o">&gt;</span> <span class="nt">tbody</span> <span class="o">~</span> <span class="nt">thead</span></pre>
   </div>
 </div>
 <h2>Test</h2>
@@ -1118,9 +1118,9 @@ table &gt; tbody ~ thead</pre>
 <li><a href="https://github.com/yahoo/debugCSS/blob/master/debugCSS.css#L282">https://github.com/yahoo/debugCSS/blob/master/debugCSS.css#L282</a></li>
 </ul>
 <h2>Selector</h2>
-<div class="codeBlock">
+<div class="codeBlock cssExample">
   <div class="highlight">
-    <pre>th:not([scope]):not([id])</pre>
+    <pre><span class="nt">th</span><span class="nd">:not</span><span class="o">([</span><span class="nt">scope</span><span class="o">])</span><span class="nd">:not</span><span class="o">([</span><span class="nt">id</span><span class="o">])</span></pre>
   </div>
 </div>
 <h2>Test</h2>
